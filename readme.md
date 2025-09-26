@@ -1,7 +1,18 @@
-<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fotterhud.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Times+used&edge_flat=false"/>
+# SealHUD Redirect Repository
 
-This is a HUD for RaceRoomRacingExperience
+This is a WebHud for Raceroom based on original OtterHud.
+Since OtterHud is not being updated anymore and it still works with its telemetry, I created this new repository on GitHub where I can make simple fixes and keep it minimally updated.
 
-All information can be found here:
+In order to make it usable, you need to change the Raceroom launch parameter on STEAM and point it to my repository: 
 
-https://forum.sector3studios.com/index.php?threads/otterhud-a-custom-webhud-with-additional-features.13152/
+-webHudUrl=https://sealhud.github.io/
+
+Remember to update your CrewChief to the latest version, or if you use dash.exe, update the executable to the newest version: https://sealhud.github.io/dash.zip
+
+If more people are interested in contributing to the maintenance of this dash, they are more than welcome.
+
+More information can be found here:
+https://forum.kw-studios.com/index.php?threads/new-repository-and-fix-for-otterhud.20675/
+
+Cheers. =D
+Diego Junges
