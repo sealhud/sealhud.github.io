@@ -1,0 +1,5819 @@
+@charset "UTF-8";
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: url(files/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUtiZTaR.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: url(files/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUJiZTaR.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: url(files/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUliZTaR.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: url(files/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUhiZTaR.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: url(files/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiZQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.settings .button_close,
+.settings .button_reset,
+.settings .buttona,
+.settings .buttonb,
+.settings .buttonc,
+.settings .buttond,
+.settings .buttonSnap,
+.settings .toggleChangeLog,
+.settings .widget label,
+.toggleRanking:hover,
+.toggleSettings:hover,
+.toggleVisibility:hover,
+input[type="checkbox"] {
+  cursor: url(files/cursorHand.9c0aff3ef50f3127c04d2e9ff5524de7.cur), pointer;
+}
+@font-face {
+  font-family: OswaldNumbersMono;
+  src: url(files/OswaldNumbersMono.40bf4b1b5e7164d23c3cb66e8e79bd55.ttf);
+}
+@font-face {
+  font-family: EurasiaEx;
+  src: url(files/EurasiaExa-Regular.a12045fea358a67daf5f0f1d0a3c9e7a.ttf);
+}
+@font-face {
+  font-family: EurasiaEx-Bold;
+  src: url(files/EurasiaEx.9ecb31af0cb8c0c1815495dae3b67d88.ttf);
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  overflow: hidden;
+}
+body,
+button,
+html,
+input,
+option,
+select {
+  font-family: Oswald;
+}
+.mono {
+  font-family: OswaldNumbersMono, Oswald;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  cursor: url(files/cursor.fb2ce47b535bab8313bcb7f68cd0bf61.cur), pointer;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:hover {
+  box-shadow: 0 0 0 1px #333, 0 0 1.7vh #000;
+}
+input[type="checkbox"]:checked {
+  background: #fff;
+  border: 4px solid #111;
+}
+input[type="checkbox"]:checked:after {
+  display: none;
+}
+input[type="range"] {
+  position: relative;
+  display: inline-block;
+  margin-left: 3%;
+  overflow: hidden;
+  -webkit-appearance: none;
+  border-width: 0;
+  background-color: transparent;
+  height: 10px;
+  width: 65%;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 100%;
+  -webkit-appearance: none;
+  color: #13bba4;
+  border-width: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+input[type="range"]::-webkit-slider-thumb {
+  width: 10px;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  height: 100%;
+  background: #fff;
+  box-shadow: -200px 0 0 200px #18b8eb;
+  border-width: 0;
+}
+#root,
+.app {
+  height: 100%;
+  position: relative;
+}
+.app {
+  margin: 0 auto;
+}
+.app.hide .widgets {
+  display: none;
+}
+.viewport {
+  width: 1920px;
+  height: 1080px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  zoom: 1;
+}
+html.debug .viewport {
+  background: transparent;
+  background-size: cover;
+  background-position: 50%;
+}
+.viewport .rankingSite,
+.viewport .rankingSite .rankingSiteFrame {
+  cursor: url(files/cursor.fb2ce47b535bab8313bcb7f68cd0bf61.cur), auto;
+}
+.viewport .changelog {
+  position: relative;
+  top: 2.5%;
+  left: 2.5%;
+  width: 95%;
+  height: 95%;
+  background: rgba(0, 0, 0, 0.8);
+  border: 10px solid hsla(0, 0%, 48.2%, 0.8);
+  border-radius: 10px;
+  font-size: 46px;
+}
+.viewport .changelog .line {
+  top: 43%;
+}
+.viewport .changelog .line,
+.viewport .changelog .line2 {
+  left: 1%;
+  width: 14%;
+  height: 1px;
+  color: #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-radius: 1px;
+  position: absolute;
+}
+.viewport .changelog .line2 {
+  top: 71%;
+}
+.viewport .changelog .otterLogo {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  zoom: 0.5;
+}
+.viewport .changelog .otterTitle {
+  position: absolute;
+  left: 47%;
+  text-decoration: underline;
+  top: 1%;
+  color: #fff;
+  font-weight: 700;
+}
+.viewport .changelog .otterVersion {
+  position: absolute;
+  top: 38%;
+  left: 2%;
+  color: silver;
+}
+.viewport .changelog .forumTitle {
+  position: absolute;
+  top: 43.5%;
+  left: 6px;
+  color: #fff;
+  font-size: 24px;
+  white-space: pre;
+  text-align: center;
+}
+.viewport .changelog .forumQRImg {
+  position: absolute;
+  top: 49.2%;
+  left: 2.4%;
+  zoom: 0.78;
+}
+.viewport .changelog .coffeePot {
+  position: absolute;
+  zoom: 0.845;
+  top: 73%;
+  left: 0.75%;
+  background: hsla(0, 0%, 100%, 0.8);
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+.viewport .changelog .paypalQRImg {
+  position: absolute;
+  top: 73%;
+  left: 7.8%;
+  zoom: 0.55;
+}
+.viewport .changelog .payPal_1 {
+  position: absolute;
+  font-size: 34px;
+  top: 87%;
+  left: 2%;
+  color: #fff;
+  white-space: pre;
+}
+.viewport .changelog .payPal_2 {
+  position: absolute;
+  font-size: 34px;
+  top: 91%;
+  left: 1%;
+  white-space: pre;
+}
+.viewport .changelog .changeLogTitle {
+  position: absolute;
+  font-size: 36px;
+  left: 54%;
+  top: 10%;
+  transform: translate(-14%);
+}
+.viewport .changelog .theLog {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.9);
+  font-size: 18px;
+  line-height: 22px;
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  top: 14%;
+  left: 16%;
+  overflow: auto;
+  max-height: 80%;
+  min-height: 80%;
+  width: 82%;
+}
+.viewport .changelog .gotIt {
+  height: 50px;
+  width: 75%;
+  position: absolute;
+  color: #000;
+  left: 20%;
+  top: 94.5%;
+  border: 2px solid #000;
+  border-radius: 10px;
+  text-align: center;
+  background: hsla(0, 0%, 100%, 0.8);
+  text-transform: uppercase;
+  font-size: 42px;
+  line-height: 42px;
+}
+.viewport .changelog .gotIt:hover {
+  background: #00c832;
+  color: #000;
+}
+.viewport .changelog .gotIt:focus {
+  outline: none;
+}
+.settings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  background: rgba(70, 70, 70, 0.8);
+  width: 1700px;
+  padding: 10px;
+  zoom: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.settings .warningtext {
+  display: block;
+  height: 10px;
+  width: 1700px;
+  left: 50%;
+  transform: translate(23%);
+  top: 0;
+  font-size: 18px;
+  text-align: center;
+  color: red;
+  animation: warningBlinker 1s linear infinite;
+}
+.settings .versionNumber {
+  color: #fff;
+  width: 278px;
+  text-align: center;
+  height: 14px;
+  line-height: 14px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.settings .performance {
+  display: block;
+  position: absolute;
+  width: 125px;
+  height: 24px;
+  margin: 0 200px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.settings .otterhud_logo {
+  display: block;
+  position: absolute;
+  width: 443px;
+  height: 700px;
+  margin: 105px 115px 0;
+  zoom: 0.42;
+}
+.settings .buttonSnap {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 210px;
+  height: 24px;
+  margin: 383px 35px 0;
+  border: 2px solid #333;
+  border-radius: 3px;
+  background: #000;
+  color: #fff;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.settings .buttonSnap:hover {
+  background: #fff;
+  color: #000;
+}
+.settings .buttonSnap:focus {
+  outline: none;
+}
+.settings .buttonSnap.active {
+  background: rgba(0, 178, 70, 0.5);
+  border: 2px solid rgba(0, 178, 70, 0.8);
+  color: #fff;
+}
+.settings .toggleChangeLog {
+  display: block;
+  position: absolute;
+  top: -26px;
+  width: 210px;
+  height: 24px;
+  margin: 383px 35px 0;
+  border: 2px solid #333;
+  border-radius: 3px;
+  background: #000;
+  color: #fff;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.settings .toggleChangeLog:hover {
+  background: #fff;
+  color: #000;
+}
+.settings .toggleChangeLog:focus {
+  outline: none;
+}
+.settings .widget {
+  padding: 5px;
+  width: 246px;
+  border: 1px solid hsla(0, 0%, 100%, 0);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 3px 1%;
+}
+.settings .widget:first-child {
+  padding-top: 5px;
+}
+.settings .widget:last-child {
+  padding-bottom: 5px;
+}
+.settings .widget label {
+  display: block;
+}
+.settings .widget label:hover {
+  color: #ffa;
+}
+.settings .widget label.main {
+  border: 2px solid #2d2d2d;
+  background: rgba(64, 64, 64, 0);
+  padding: 5px 0 5px 10px;
+}
+.settings .widget label.main.active {
+  border: 2px solid #fff;
+  color: #fff;
+  background: rgba(0, 178, 70, 0.5);
+}
+.settings .widget label.main.active:hover {
+  color: #ffa;
+}
+.settings .widget label .text {
+  white-space: nowrap;
+  font-size: 20px;
+  width: 245px;
+  display: inline-block;
+  text-overflow: ellipsis;
+}
+.settings .widget .resetWidgetButton {
+  float: right;
+  position: relative;
+  top: -27px;
+  height: 24px;
+  margin-right: 3px;
+  color: #fff;
+  background: hsla(0, 0%, 40.8%, 0.5);
+}
+.settings .widget .resetWidgetButton:hover {
+  background: rgba(198, 70, 0, 0.9);
+}
+.settings .widget input[type="checkbox"] {
+  float: right;
+  margin-left: 20px;
+  clear: both;
+  position: relative;
+  top: -22px;
+}
+.settings .widget .subWidget {
+  color: #aaa;
+  background: transparent;
+  padding: 5px 0 2px 10px;
+  height: 22px;
+}
+.settings .widget .subWidget .urlInput {
+  position: absolute;
+  width: 1200px;
+  left: 50%;
+  top: 26%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  font-size: 28px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+.settings .widget .subWidget .sub {
+  background: transparent;
+  border: 2px solid #5a5a5a;
+  margin-right: 10px;
+}
+.settings .widget .subWidget .sub.active {
+  border: 2px solid rgba(0, 178, 70, 0.8);
+  color: #fff;
+  background: rgba(0, 178, 70, 0.5);
+}
+.settings .widget .subWidget .sub.active:hover {
+  color: #ffa;
+}
+.settings .widget .subWidget .sub .volValue {
+  display: inline-block;
+  margin-left: 5px;
+}
+.settings .widget .rankInvert {
+  border: 1px solid #fff;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  position: relative;
+  width: 35px;
+  height: 11px;
+  line-height: 14px;
+  float: right;
+  right: -2px;
+  top: -1px;
+  text-align: center;
+  margin-top: 0;
+  padding: 0 0 15px;
+}
+.settings .widget .rankInvert.active {
+  background: #fff;
+  border: 1px solid #90ee90;
+  color: #000;
+  font-weight: 700;
+}
+.settings .widget .num1 {
+  border: 1px solid #fff;
+  background: #000;
+  color: #aaa;
+  font-size: 12px;
+  position: relative;
+  height: 16px;
+  width: 18px;
+  float: right;
+  text-align: center;
+  margin-top: -1px;
+  padding: 0 0 15px;
+}
+.settings .widget .num1.active {
+  background: #006400;
+  color: #fff;
+}
+.settings .widget .num2 {
+  border: 1px solid #fff;
+  background: #000;
+  color: #aaa;
+  font-size: 12px;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  float: right;
+  text-align: center;
+  margin: -1px 0 0;
+  padding: 0 0 15px;
+}
+.settings .widget .num2.active {
+  background: #006400;
+  color: #fff;
+}
+.settings .widget .num3 {
+  border: 1px solid #fff;
+  background: #000;
+  color: #aaa;
+  font-size: 12px;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  float: right;
+  text-align: center;
+  margin-right: -2px;
+  margin-top: -1px;
+  padding: 0 0 15px;
+}
+.settings .widget .num3.active {
+  background: #006400;
+  color: #fff;
+}
+.settings .button_reset {
+  width: calc(50% - 20px);
+  margin: 5px 10px;
+  border: 2px solid #333;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  height: 30px;
+  padding: 1px 0 0;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.settings .button_reset:hover {
+  background: #fff;
+  color: #000;
+}
+.settings .button_reset:focus {
+  outline: none;
+}
+.settings .button_close {
+  width: calc(100% - 20px);
+  margin: 5px 10px;
+  border: 2px solid #333;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  height: 40px;
+  padding: 2px 0 0;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.settings .button_close:hover {
+  background: #fff;
+  color: #000;
+}
+.settings .button_close:focus {
+  outline: none;
+}
+.settings .buttona {
+  width: calc(50% - 20px);
+  margin: 10px;
+  border: 2px solid #333;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  height: 30px;
+  padding: 1px 0 0;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.settings .buttona:hover {
+  background: #fff;
+  color: #000;
+}
+.settings .buttona:focus {
+  outline: none;
+}
+.settings .buttona.active {
+  background: rgba(0, 178, 70, 0.5);
+  border: 2px solid rgba(0, 178, 70, 0.8);
+  color: #fff;
+}
+.settings .buttonb {
+  width: calc(16.67% - 20px);
+  margin: 5px 10px;
+  border: 2px solid #333;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  height: 30px;
+  padding: 1px 0 0;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.settings .buttonb:hover {
+  background: #fff;
+  color: #000;
+}
+.settings .buttonb:focus {
+  outline: none;
+}
+.settings .buttonb.active {
+  background: rgba(0, 178, 70, 0.5);
+  border: 2px solid rgba(0, 178, 70, 0.8);
+  color: #fff;
+}
+.settings .buttonc {
+  width: calc(16.67% - 20px);
+  margin: 5px 10px;
+  border: 2px solid #333;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  height: 30px;
+  padding: 1px 0 0;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.settings .buttonc:hover {
+  background: #fff;
+  color: #000;
+}
+.settings .buttonc:focus {
+  outline: none;
+}
+.settings .buttonc.active {
+  background: rgba(0, 178, 70, 0.5);
+  border: 2px solid rgba(0, 178, 70, 0.8);
+  color: #fff;
+}
+.settings .buttond {
+  width: calc(16.67% - 21px);
+  margin: 5px 10px;
+  border: 2px solid #333;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  height: 30px;
+  padding: 1px 0 0;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.settings .buttond:hover {
+  background: #fff;
+  color: #000;
+}
+.settings .buttond:focus {
+  outline: none;
+}
+.settings .buttond.active {
+  background: rgba(0, 178, 70, 0.5);
+  border: 2px solid rgba(0, 178, 70, 0.8);
+  color: #fff;
+}
+.settings .languages {
+  display: flex;
+  width: 50%;
+  height: 50px;
+}
+.settings .languages .language {
+  flex: auto;
+  margin: 10px;
+  padding: 2px 0 0;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 20px;
+  width: 33.33%;
+}
+.settings .languages .language:hover {
+  background: #fff;
+  color: #000;
+}
+.settings .languages .language.active {
+  background: rgba(0, 178, 70, 0.5);
+  color: #000;
+}
+.help {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  background: transparent;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 15px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.4);
+  line-height: 1.4;
+  width: 300px;
+  overflow: visible;
+  white-space: nowrap;
+}
+.help a {
+  color: #ffa;
+}
+.help .versionMismatch {
+  color: #ff0;
+  text-align: center;
+}
+.help .noData {
+  font-weight: 700;
+  color: red;
+  font-size: 22px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+.help .fillor {
+  color: transparent;
+  text-shadow: 0 0 0 transparent, 0 0 0 transparent;
+}
+.help .ccOption {
+  color: silver;
+  background: #323232;
+  width: 195px;
+  text-align: center;
+}
+.helpa {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  background: transparent;
+  border-radius: 20px;
+  font-size: 15px;
+  text-shadow: 0 0 0 transparent, 0 0 0 transparent;
+  line-height: 1.4;
+  width: 240px;
+  overflow: visible;
+  white-space: nowrap;
+  opacity: 1;
+}
+.helpa,
+.helpa a {
+  color: transparent;
+}
+.debug.hide {
+  display: none;
+}
+.debug input {
+  width: 600px;
+  transform: translate(-50%);
+}
+.debug .clear,
+.debug input {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  top: 0;
+  padding: 10px;
+}
+.debug .clear {
+  width: 40px;
+  text-align: center;
+  transform: translate(260px);
+  background: #000;
+}
+.debug .clear:hover {
+  background: #8b0000;
+}
+.debug .debugInfo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 26px;
+  background: rgba(0, 0, 0, 0.8);
+  max-height: 95%;
+  font-family: Inconsolata, Courier New, Courier, monospace;
+  font-size: 10px;
+  overflow: auto;
+  width: 600px;
+  padding: 10px;
+  z-index: 1111;
+}
+.debug .debugInfo::-webkit-scrollbar {
+  width: 10px;
+  background-color: #1b1b1b;
+  border-left: 0.1vh solid hsla(0, 0%, 100%, 0.1);
+}
+.debug .debugInfo::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: #fff;
+}
+.toggleRanking,
+.toggleSettings,
+.toggleVisibility {
+  position: absolute;
+  top: 150px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 100%;
+  opacity: 0;
+}
+.toggleRanking:hover .svgIcon svg,
+.toggleSettings:hover .svgIcon svg,
+.toggleVisibility:hover .svgIcon svg {
+  fill: #ffa;
+}
+.toggleRanking .svgIcon,
+.toggleSettings .svgIcon,
+.toggleVisibility .svgIcon {
+  height: 50px;
+  width: 50px;
+  padding: 10px 5px;
+}
+.toggleRanking .svgIcon svg,
+.toggleSettings .svgIcon svg,
+.toggleVisibility .svgIcon svg {
+  fill: #fff;
+}
+.toggleRanking.showIcon,
+.toggleSettings.showIcon,
+.toggleVisibility.showIcon {
+  opacity: 1;
+}
+.toggleVisibility {
+  top: 210px;
+}
+.toggleRanking {
+  top: 270px;
+}
+.lockHud,
+.toggleLayout1,
+.toggleLayout2,
+.toggleLayout3 {
+  position: absolute;
+  top: 330px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  color: #fff;
+  border-radius: 100%;
+  font-size: 38px;
+  padding: 4px;
+  text-align: center;
+  vertical-align: middle;
+  opacity: 0;
+}
+.lockHud.showIcon,
+.toggleLayout1.showIcon,
+.toggleLayout2.showIcon,
+.toggleLayout3.showIcon {
+  opacity: 1;
+}
+.lockHud.active,
+.toggleLayout1.active,
+.toggleLayout2.active,
+.toggleLayout3.active {
+  background: #fff;
+  color: #000;
+}
+.toggleLayout2 {
+  top: 390px;
+}
+.toggleLayout2.active {
+  background: #fff;
+  color: #000;
+}
+.toggleLayout3 {
+  top: 450px;
+}
+.toggleLayout3.active {
+  background: #fff;
+  color: #000;
+}
+.lockHud {
+  top: 510px;
+}
+.lockHud.active {
+  background: #fff;
+}
+.editGrid {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  right: -100%;
+  bottom: 0;
+  pointer-events: none;
+  background: url(files/editGrid.0144a405a3acf75655691623e97d2682.png) 0 0;
+  z-index: -1;
+}
+.editGrid:after,
+.editGrid:before {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.editGrid:before {
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  border-left: 2px solid #000;
+}
+.editGrid:after {
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 2px solid #000;
+}
+@keyframes warningBlinker {
+  50% {
+    opacity: 0.7;
+  }
+  0% {
+    opacity: 1;
+  }
+}
+.svgIcon {
+  display: inline-block;
+  min-height: 10px;
+  min-width: 10px;
+}
+.svgIcon svg {
+  height: 100%;
+  width: 100%;
+}
+.gforce {
+  width: 100px;
+  height: 100px;
+  bottom: 40px;
+  right: 380px;
+  position: absolute;
+  border-radius: 100%;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5)
+    url(files/grid.0216bab27e012fc73a7c4880e8a403f0.png);
+  transition: background 1s;
+}
+.gforce .point {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 10px #000, 0 0 10px #000, 0 0 10px #000;
+  font-size: 10px;
+}
+.gforce .point,
+.gforce .ring {
+  transform-origin: top left;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.gforce .ring {
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  border: 2px solid #333;
+}
+.gforce .ring.ring-1 {
+  width: 25%;
+  height: 25%;
+}
+.gforce .ring.ring-2 {
+  width: 50%;
+  height: 50%;
+}
+.gforce .ring.ring-3 {
+  width: 75%;
+  height: 75%;
+}
+.gforce .ring.ring-4 {
+  width: 100%;
+  height: 100%;
+}
+.gforce .line-horizontal {
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  margin-top: -1px;
+}
+.gforce .line-horizontal.line-left {
+  left: 0;
+}
+.gforce .line-horizontal.line-right {
+  right: 0;
+}
+.gforce .line-vertical {
+  border-left: 1px solid #444;
+  border-right: 1px solid #444;
+  position: absolute;
+  height: 50%;
+  left: 50%;
+  margin-left: -1px;
+}
+.gforce .line-vertical.line-top {
+  top: 0;
+}
+.gforce .line-vertical.line-bottom {
+  bottom: 0;
+}
+.gforce .letter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 1px;
+}
+.gforce .gripLevel {
+  position: absolute;
+  z-index: 11;
+  font-size: 10px;
+  width: 20px;
+  height: 20px;
+  width: 50%;
+  height: 50%;
+}
+.gforce .gripLevel.fl {
+  top: 0;
+  left: 0;
+  border-top: 4px solid purple;
+  border-left: 4px solid purple;
+  border-radius: 100% 0 0 0;
+}
+.gforce .gripLevel.fr {
+  top: 0;
+  right: 0;
+  border-top: 4px solid purple;
+  border-right: 4px solid purple;
+  border-radius: 0 100% 0 0;
+}
+.gforce .gripLevel.rl {
+  bottom: 0;
+  left: 0;
+  border-bottom: 4px solid purple;
+  border-left: 4px solid purple;
+  border-radius: 0 0 0 100%;
+}
+.gforce .gripLevel.rr {
+  bottom: 0;
+  right: 0;
+  border-bottom: 4px solid purple;
+  border-right: 4px solid purple;
+  border-radius: 0 0 100% 0;
+}
+.fuelDetail {
+  width: 630px;
+  height: 214px;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  font-weight: 350;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.fuelDetail.low {
+  background: rgba(255, 0, 0, 0.7);
+}
+.fuelDetail .StoredInfoBox {
+  border: 1px solid #ff8c00;
+  border-radius: 5px;
+  width: 620px;
+  opacity: 0.5;
+  height: 59px;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.69);
+}
+.fuelDetail .StoredInfoBox,
+.fuelDetail .StoredSpeedBox {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .StoredSpeedBox {
+  width: 200px;
+  height: 35px;
+  left: 10px;
+  top: 24px;
+  background: hsla(0, 0%, 100%, 0);
+}
+.fuelDetail .StoredSpeedBox .StoredSpeed {
+  white-space: pre;
+  color: gold;
+  font-style: normal;
+  font-size: 28px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .StoredSpeedTextBox {
+  display: block;
+  width: 200px;
+  height: 24px;
+  left: 10px;
+  top: 0;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .StoredSpeedTextBox .StoredSpeedText {
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .StoredLapAverageBox {
+  display: block;
+  width: 200px;
+  height: 35px;
+  left: 210px;
+  top: 24px;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .StoredLapAverageBox .StoredLapAverage {
+  white-space: pre;
+  color: gold;
+  font-style: normal;
+  font-size: 28px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .StoredLapAverageTextBox {
+  display: block;
+  width: 200px;
+  height: 24px;
+  left: 210px;
+  top: 0;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .StoredLapAverageTextBox .StoredLapAverageText {
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .StoredLapBestBox {
+  display: block;
+  width: 200px;
+  height: 35px;
+  left: 410px;
+  top: 24px;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .StoredLapBestBox .StoredLapBest {
+  white-space: pre;
+  color: #00d700;
+  font-style: normal;
+  font-size: 28px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .StoredLapBestTextBox {
+  display: block;
+  width: 200px;
+  height: 24px;
+  left: 410px;
+  top: 0;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .StoredLapBestTextBox .StoredLapBestText {
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .FuelRemainBox {
+  border: 1px solid #ff8c00;
+  border-radius: 10px;
+  width: 120px;
+  opacity: 0.5;
+  height: 140px;
+  left: 0;
+  top: 59px;
+  background: rgba(0, 0, 0, 0.69);
+}
+.fuelDetail .FuelReaminAmountBox,
+.fuelDetail .FuelRemainBox {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .FuelReaminAmountBox {
+  width: 110px;
+  height: 80px;
+  left: 5px;
+  top: 88px;
+  background: hsla(0, 0%, 100%, 0);
+}
+.fuelDetail .FuelReaminAmountBox .FuelRemain {
+  width: 110px;
+  height: 80px;
+  white-space: pre;
+  color: gold;
+  font-style: normal;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .FuelRemainTextBox {
+  display: block;
+  width: 110px;
+  height: 24px;
+  left: 5px;
+  top: 169px;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .FuelRemainTextBox .FuelRemainText {
+  width: 110px;
+  height: 24px;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .TimeEstimateBox {
+  border: 1px solid #ff8c00;
+  border-radius: 10px;
+  width: 120px;
+  opacity: 0.5;
+  height: 70px;
+  left: 125px;
+  top: 59px;
+  background: rgba(0, 0, 0, 0.69);
+}
+.fuelDetail .TimeEstimateAmountBox,
+.fuelDetail .TimeEstimateBox {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .TimeEstimateAmountBox {
+  width: 110px;
+  height: 37px;
+  left: 130px;
+  top: 88px;
+  background: hsla(0, 0%, 100%, 0);
+}
+.fuelDetail .TimeEstimateAmountBox .TimeEstimateAmount {
+  width: 110px;
+  height: 37px;
+  white-space: pre;
+  color: #0f0;
+  font-style: normal;
+  font-size: 35px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .TimeEstimateTextBox {
+  display: block;
+  width: 115px;
+  height: 24px;
+  left: 130px;
+  top: 64px;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .TimeEstimateTextBox .TimeEstimateText {
+  width: 110px;
+  height: 24px;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .LapsEstimateBox {
+  border: 1px solid #ff8c00;
+  border-radius: 10px;
+  width: 120px;
+  opacity: 0.5;
+  height: 70px;
+  left: 125px;
+  top: 129px;
+  background: rgba(0, 0, 0, 0.69);
+}
+.fuelDetail .LapsEstimateAmountBox,
+.fuelDetail .LapsEstimateBox {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .LapsEstimateAmountBox {
+  width: 110px;
+  height: 37px;
+  left: 130px;
+  top: 132px;
+  background: hsla(0, 0%, 100%, 0);
+}
+.fuelDetail .LapsEstimateAmountBox .LapsEstimateAmount {
+  width: 110px;
+  height: 37px;
+  white-space: pre;
+  color: #0f0;
+  font-style: normal;
+  font-size: 35px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .LapsEstimateTextBox {
+  display: block;
+  width: 110px;
+  height: 24px;
+  left: 130px;
+  top: 169px;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .LapsEstimateTextBox .LapsEstimateText {
+  width: 110px;
+  height: 24px;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .LapsEstimateOnlyBox {
+  display: block;
+  border: 1px solid #ff8c00;
+  border-radius: 10px;
+  width: 120px;
+  opacity: 0.5;
+  height: 140px;
+  left: 125px;
+  top: 59px;
+  background: rgba(0, 0, 0, 0.69);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .LapsEstimateOnlyAmountBox {
+  display: block;
+  width: 110px;
+  height: 80px;
+  left: 130px;
+  top: 88px;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .LapsEstimateOnlyAmountBox .LapsEstimateOnlyAmount {
+  width: 110px;
+  height: 80px;
+  white-space: pre;
+  color: #0f0;
+  font-style: normal;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .LapsEstimateOnlyTextBox {
+  display: block;
+  width: 110px;
+  height: 24px;
+  left: 130px;
+  top: 169px;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .LapsEstimateOnlyTextBox .LapsEstimateOnlyText {
+  width: 110px;
+  height: 24px;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .FuelLastLapBox {
+  border: 1px solid #ff8c00;
+  border-radius: 10px;
+  width: 120px;
+  opacity: 0.5;
+  height: 70px;
+  left: 250px;
+  top: 59px;
+  background: rgba(0, 0, 0, 0.69);
+}
+.fuelDetail .FuelLastLapAmountBox,
+.fuelDetail .FuelLastLapBox {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .FuelLastLapAmountBox {
+  width: 110px;
+  height: 37px;
+  left: 255px;
+  top: 88px;
+  background: hsla(0, 0%, 100%, 0);
+}
+.fuelDetail .FuelLastLapAmountBox .FuelLastLapAmount {
+  width: 110px;
+  height: 37px;
+  white-space: pre;
+  color: #d2691e;
+  font-style: normal;
+  font-size: 35px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .FuelLastLapTextBox {
+  display: block;
+  width: 110px;
+  height: 24px;
+  left: 255px;
+  top: 64px;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .FuelLastLapTextBox .FuelLastLapText {
+  width: 110px;
+  height: 24px;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .FuelPerLapBox {
+  border: 1px solid #ff8c00;
+  border-radius: 10px;
+  width: 120px;
+  opacity: 0.5;
+  height: 70px;
+  left: 250px;
+  top: 129px;
+  background: rgba(0, 0, 0, 0.69);
+}
+.fuelDetail .FuelPerLapAmountBox,
+.fuelDetail .FuelPerLapBox {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .FuelPerLapAmountBox {
+  width: 110px;
+  height: 37px;
+  left: 255px;
+  top: 132px;
+  background: hsla(0, 0%, 100%, 0);
+}
+.fuelDetail .FuelPerLapAmountBox .FuelPerLapAmount {
+  width: 110px;
+  height: 37px;
+  white-space: pre;
+  color: #d2691e;
+  font-style: normal;
+  font-size: 35px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .FuelPerLapTextBox {
+  display: block;
+  width: 110px;
+  height: 24px;
+  left: 255px;
+  top: 169px;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .FuelPerLapTextBox .FuelPerLapText {
+  width: 110px;
+  height: 24px;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .FuelToEndBox {
+  border: 1px solid #ff8c00;
+  border-radius: 10px;
+  width: 120px;
+  opacity: 0.5;
+  height: 140px;
+  left: 375px;
+  top: 59px;
+  background: rgba(0, 0, 0, 0.69);
+}
+.fuelDetail .FuelToEndAmountBox,
+.fuelDetail .FuelToEndBox {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .FuelToEndAmountBox {
+  width: 110px;
+  height: 80px;
+  left: 380px;
+  top: 88px;
+  background: hsla(0, 0%, 100%, 0);
+}
+.fuelDetail .FuelToEndAmountBox .FuelToEndAmount {
+  width: 110px;
+  height: 80px;
+  white-space: pre;
+  color: #d2691e;
+  font-style: normal;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .FuelToEndTextBox {
+  display: block;
+  width: 110px;
+  height: 24px;
+  left: 380px;
+  top: 169px;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .FuelToEndTextBox .FuelToEndText {
+  width: 110px;
+  height: 24px;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .FuelToAddBox {
+  border: 1px solid #ff8c00;
+  border-radius: 10px;
+  width: 120px;
+  opacity: 0.5;
+  height: 140px;
+  left: 500px;
+  top: 59px;
+  background: rgba(0, 0, 0, 0.69);
+}
+.fuelDetail .FuelToAddAmountBox,
+.fuelDetail .FuelToAddBox {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .FuelToAddAmountBox {
+  width: 110px;
+  height: 80px;
+  left: 505px;
+  top: 88px;
+  background: hsla(0, 0%, 100%, 0);
+}
+.fuelDetail .FuelToAddAmountBox .FuelToAddAmount {
+  width: 110px;
+  height: 80px;
+  white-space: pre;
+  color: #d2691e;
+  font-style: normal;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .FuelToAddTextBox {
+  display: block;
+  width: 110px;
+  height: 24px;
+  left: 505px;
+  top: 169px;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelDetail .FuelToAddTextBox .FuelToAddText {
+  width: 110px;
+  height: 24px;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .ClearData {
+  width: 630px;
+  height: 50px;
+  left: 0;
+  top: 0;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+.fuelDetail .ClearData,
+.fuelDetail .confirmNo {
+  display: block;
+  opacity: 1;
+  border: 1px solid #ff8c00;
+  border-radius: 10px;
+  background: #000;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  text-align: center;
+  margin: 0;
+}
+.fuelDetail .confirmNo {
+  left: 378px;
+}
+.fuelDetail .confirmNo,
+.fuelDetail .confirmYes {
+  width: 126px;
+  height: 100px;
+  top: 60px;
+  font-size: 50px;
+}
+.fuelDetail .confirmYes {
+  display: block;
+  left: 126px;
+  opacity: 1;
+  border: 1px solid #ff8c00;
+  border-radius: 10px;
+  background: #000;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  text-align: center;
+  margin: 0;
+}
+.fuelCalc {
+  width: 599px;
+  height: 199px;
+  background: transparent;
+  overflow: hidden;
+  position: absolute;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.fuelCalc.low {
+  background: rgba(255, 0, 0, 0.7);
+}
+.fuelCalc .FuelCalcTitleBox {
+  opacity: 1;
+}
+.fuelCalc .FuelCalcTitleBox,
+.fuelCalc .FuelCalcTitleTextBox {
+  display: block;
+  width: 599px;
+  height: 30px;
+  left: 0;
+  top: 29px;
+  background: #000;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelCalcTitleTextBox {
+  border: 2px solid #ff8c00;
+}
+.fuelCalc .FuelCalcTitleTextBox .FuelCalcTitleText {
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelCalc .FuelCalcMinuteBox {
+  opacity: 0.5;
+  height: 70px;
+}
+.fuelCalc .FuelCalcMinuteBox,
+.fuelCalc .FuelCalcMinuteTextBox {
+  display: block;
+  width: 120px;
+  left: 0;
+  top: 59px;
+  background: #000;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelCalcMinuteTextBox {
+  height: 25px;
+  border: 2px solid #ff8c00;
+  border-right: 0;
+  border-top: 0;
+}
+.fuelCalc .FuelCalcMinuteTextBox .FuelCalcMinuteText {
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelCalc .FuelCalcMinuteAmountBox {
+  display: block;
+  border: 2px solid #ff8c00;
+  border-right: 0;
+  border-top: 0;
+  width: 120px;
+  height: 45px;
+  left: 0;
+  top: 84px;
+  background: #646464;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelCalcMinuteAmountBox .FuelCalcMinuteAmount {
+  width: 120px;
+  height: 45px;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelCalc .FuelCalcRoundBox {
+  opacity: 0.5;
+  height: 70px;
+}
+.fuelCalc .FuelCalcRoundBox,
+.fuelCalc .FuelCalcRoundTextBox {
+  display: block;
+  width: 120px;
+  left: 0;
+  top: 129px;
+  background: #000;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelCalcRoundTextBox {
+  border: 2px solid #ff8c00;
+  border-right: 0;
+  border-top: 0;
+  height: 25px;
+}
+.fuelCalc .FuelCalcRoundTextBox .FuelCalcRoundText {
+  width: 120px;
+  height: 23px;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelCalc .FuelCalcRoundAmountBox {
+  display: block;
+  border: 2px solid #ff8c00;
+  border-right: 0;
+  border-top: 0;
+  width: 120px;
+  height: 45px;
+  left: 0;
+  top: 154px;
+  background: #646464;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelCalcRoundAmountBox .FuelCalcRoundAmount {
+  width: 120px;
+  height: 45px;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelCalc .FuelMinuteM1Box {
+  opacity: 0;
+  border-width: 0;
+  background: transparent;
+}
+.fuelCalc .FuelMinuteM1Box,
+.fuelCalc .FuelMinuteM1TextBox {
+  display: block;
+  width: 120px;
+  height: 35px;
+  left: 120px;
+  top: 59px;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelMinuteM1TextBox {
+  border: 2px solid #ff8c00;
+  border-right: 0;
+  border-top: 0;
+  background: #646464;
+}
+.fuelCalc .FuelMinuteM1TextBox .FuelMinuteM1Text {
+  width: 120px;
+  height: 35px;
+  white-space: pre;
+  color: #7d0000;
+  font-style: normal;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1px 0;
+}
+.fuelCalc .FuelMinuteM10Box {
+  opacity: 0;
+  background: transparent;
+}
+.fuelCalc .FuelMinuteM10Box,
+.fuelCalc .FuelMinuteM10TextBox {
+  display: block;
+  width: 120px;
+  height: 35px;
+  left: 120px;
+  top: 94px;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelMinuteM10TextBox {
+  border: 2px solid #ff8c00;
+  border-right: 0;
+  border-top: 0;
+  background: #646464;
+}
+.fuelCalc .FuelMinuteM10TextBox .FuelMinuteM10Text {
+  width: 120px;
+  height: 35px;
+  white-space: pre;
+  color: #7d0000;
+  font-style: normal;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1px 0;
+}
+.fuelCalc .FuelRoundM1Box {
+  opacity: 0;
+  background: transparent;
+}
+.fuelCalc .FuelRoundM1Box,
+.fuelCalc .FuelRoundM1TextBox {
+  display: block;
+  width: 120px;
+  height: 35px;
+  left: 120px;
+  top: 129px;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelRoundM1TextBox {
+  border: 2px solid #ff8c00;
+  border-right: 0;
+  border-top: 0;
+  background: #646464;
+}
+.fuelCalc .FuelRoundM1TextBox .FuelRoundM1Text {
+  width: 120px;
+  height: 35px;
+  white-space: pre;
+  color: #7d0000;
+  font-style: normal;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1px 0;
+}
+.fuelCalc .FuelRoundM5Box {
+  opacity: 0;
+  background: transparent;
+}
+.fuelCalc .FuelRoundM5Box,
+.fuelCalc .FuelRoundM5TextBox {
+  display: block;
+  width: 120px;
+  height: 35px;
+  left: 120px;
+  top: 164px;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelRoundM5TextBox {
+  border: 2px solid #ff8c00;
+  border-right: 0;
+  border-top: 0;
+  background: #646464;
+}
+.fuelCalc .FuelRoundM5TextBox .FuelRoundM5Text {
+  width: 120px;
+  height: 35px;
+  white-space: pre;
+  color: #7d0000;
+  font-style: normal;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1px 0;
+}
+.fuelCalc .FuelMinuteResetBox {
+  border: 1px solid #ff8c00;
+  border-right: 0;
+  border-bottom: 0;
+  opacity: 0;
+  background: transparent;
+}
+.fuelCalc .FuelMinuteResetBox,
+.fuelCalc .FuelMinuteResetTextBox {
+  display: block;
+  width: 120px;
+  height: 70px;
+  left: 240px;
+  top: 59px;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelMinuteResetTextBox {
+  border: 2px solid #ff8c00;
+  border-right: 0;
+  border-top: 0;
+  background: #7d0000;
+}
+.fuelCalc .FuelMinuteResetTextBox .FuelMinuteResetText {
+  width: 120px;
+  height: 35px;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 17px 0;
+}
+.fuelCalc .FuelRoundResetBox {
+  opacity: 0;
+  background: transparent;
+}
+.fuelCalc .FuelRoundResetBox,
+.fuelCalc .FuelRoundResetTextBox {
+  display: block;
+  width: 120px;
+  height: 70px;
+  left: 240px;
+  top: 129px;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelRoundResetTextBox {
+  border: 2px solid #ff8c00;
+  border-right: 0;
+  border-top: 0;
+  background: #7d0000;
+}
+.fuelCalc .FuelRoundResetTextBox .FuelRoundResetText {
+  width: 120px;
+  height: 35px;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 17px 0;
+}
+.fuelCalc .FuelMinuteP1Box {
+  opacity: 0;
+  background: transparent;
+}
+.fuelCalc .FuelMinuteP1Box,
+.fuelCalc .FuelMinuteP1TextBox {
+  display: block;
+  width: 120px;
+  height: 35px;
+  left: 360px;
+  top: 59px;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelMinuteP1TextBox {
+  border: 2px solid #ff8c00;
+  border-right: 0;
+  border-top: 0;
+  background: #646464;
+}
+.fuelCalc .FuelMinuteP1TextBox .FuelMinuteP1Text {
+  width: 120px;
+  height: 35px;
+  white-space: pre;
+  color: #007d00;
+  font-style: normal;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1px 0;
+}
+.fuelCalc .FuelMinuteP10Box {
+  opacity: 0;
+  background: transparent;
+}
+.fuelCalc .FuelMinuteP10Box,
+.fuelCalc .FuelMinuteP10TextBox {
+  display: block;
+  width: 120px;
+  height: 35px;
+  left: 360px;
+  top: 94px;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelMinuteP10TextBox {
+  border: 2px solid #ff8c00;
+  border-right: 0;
+  border-top: 0;
+  background: #646464;
+}
+.fuelCalc .FuelMinuteP10TextBox .FuelMinuteP10Text {
+  width: 120px;
+  height: 35px;
+  white-space: pre;
+  color: #007d00;
+  font-style: normal;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1px 0;
+}
+.fuelCalc .FuelRoundP1Box {
+  opacity: 0;
+  background: transparent;
+}
+.fuelCalc .FuelRoundP1Box,
+.fuelCalc .FuelRoundP1TextBox {
+  display: block;
+  width: 120px;
+  height: 35px;
+  left: 360px;
+  top: 129px;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelRoundP1TextBox {
+  border: 2px solid #ff8c00;
+  border-right: 0;
+  border-top: 0;
+  background: #646464;
+}
+.fuelCalc .FuelRoundP1TextBox .FuelRoundP1Text {
+  width: 120px;
+  height: 35px;
+  white-space: pre;
+  color: #007d00;
+  font-style: normal;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1px 0;
+}
+.fuelCalc .FuelRoundP5Box {
+  opacity: 0;
+  background: transparent;
+}
+.fuelCalc .FuelRoundP5Box,
+.fuelCalc .FuelRoundP5TextBox {
+  display: block;
+  width: 120px;
+  height: 35px;
+  left: 360px;
+  top: 164px;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelRoundP5TextBox {
+  border: 2px solid #ff8c00;
+  border-right: 0;
+  border-top: 0;
+  background: #646464;
+}
+.fuelCalc .FuelRoundP5TextBox .FuelRoundP5Text {
+  width: 120px;
+  height: 35px;
+  white-space: pre;
+  color: #007d00;
+  font-style: normal;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1px 0;
+}
+.fuelCalc .FuelCalcMinuteNeedBox {
+  opacity: 0.5;
+  height: 70px;
+}
+.fuelCalc .FuelCalcMinuteNeedBox,
+.fuelCalc .FuelCalcMinuteNeedTextBox {
+  display: block;
+  width: 120px;
+  left: 480px;
+  top: 59px;
+  background: #000;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelCalcMinuteNeedTextBox {
+  border: 2px solid #ff8c00;
+  border-top: 0;
+  height: 25px;
+}
+.fuelCalc .FuelCalcMinuteNeedTextBox .FuelCalcMinuteNeedText {
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelCalc .FuelCalcMinuteNeedAmountBox {
+  display: block;
+  border: 2px solid #ff8c00;
+  border-top: 0;
+  width: 120px;
+  height: 45px;
+  left: 480px;
+  top: 84px;
+  background: #646464;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelCalcMinuteNeedAmountBox .FuelCalcMinuteNeedAmount {
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelCalc .FuelCalcRoundNeedBox {
+  opacity: 0.5;
+  height: 70px;
+}
+.fuelCalc .FuelCalcRoundNeedBox,
+.fuelCalc .FuelCalcRoundNeedTextBox {
+  display: block;
+  width: 120px;
+  left: 480px;
+  top: 129px;
+  background: #000;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelCalcRoundNeedTextBox {
+  border: 2px solid #ff8c00;
+  border-top: 0;
+  height: 25px;
+}
+.fuelCalc .FuelCalcRoundNeedTextBox .FuelCalcRoundNeedText {
+  width: 120px;
+  height: 25px;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.fuelCalc .FuelCalcRoundNeedAmountBox {
+  display: block;
+  border: 2px solid #ff8c00;
+  border-top: 0;
+  width: 120px;
+  height: 45px;
+  left: 480px;
+  top: 154px;
+  background: #646464;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.fuelCalc .FuelCalcRoundNeedAmountBox .FuelCalcRoundNeedAmount {
+  width: 120px;
+  height: 45px;
+  white-space: pre;
+  color: #fff;
+  font-style: normal;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+.positionBarContainer.normal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.positionBarContainer.normal.shouldShow {
+  display: block;
+}
+.positionBarContainer.normal .positionBar {
+  position: absolute;
+  top: 0;
+  padding-top: 3px;
+  left: 50%;
+  transform: translate(-50%);
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  white-space: pre;
+  bottom: 0;
+  white-space: nowrap;
+  width: 1920px;
+  height: 43px;
+}
+.positionBarContainer.normal .positionBar:before {
+  left: 100%;
+}
+.positionBarContainer.normal .positionBar:after,
+.positionBarContainer.normal .positionBar:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10000px;
+  content: "";
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+}
+.positionBarContainer.normal .positionBar:after {
+  right: 100%;
+}
+.positionBarContainer.normal .positionBar .player {
+  width: 148px;
+  height: 40px;
+  position: relative;
+  display: inline-block;
+}
+.positionBarContainer.normal .positionBar .player .position {
+  background: rgba(0, 0, 0, 0.15);
+  color: #fff;
+  width: 25px;
+  position: absolute;
+  top: 0;
+  line-height: 40px;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  font-weight: 700;
+}
+.positionBarContainer.normal .positionBar .player .name {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  left: 10px;
+  height: 45px;
+  text-align: center;
+  padding: 0 5px 0 20px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+}
+.positionBarContainer.normal .positionBar .player .diff {
+  position: absolute;
+  text-align: center;
+  bottom: 4px;
+  right: 0;
+  left: 20px;
+}
+.positionBarContainer.normal .positionBar .player.isUser {
+  background: rgba(0, 0, 0, 0.3);
+}
+.positionBarContainer.normal .positionBar .player.isUser .diff {
+  bottom: 8px;
+  font-size: 25px;
+  color: #fffd8e;
+}
+.positionBarContainer.normal .positionBar .player.isUser .name {
+  display: none;
+}
+.positionBarContainer.normal .positionBar .player .classStyle {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  right: 0;
+  height: 8px;
+}
+.positionBarContainer.normal .positionBar .player .pitting {
+  display: inline-block;
+  position: relative;
+  width: 27px;
+  padding: 0;
+  line-height: 21px;
+  text-align: center;
+  color: #fff;
+  top: 17px;
+  left: 0;
+  margin-top: 23px;
+  z-index: -1;
+  height: 21px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.positionBarContainer.normal .positionBar .player .pitting.noShadow {
+  text-shadow: 2px 2px 2px transparent, 0 0 10px transparent;
+}
+.positionBarContainer.normal .positionBar .player .pitting .pittime {
+  display: inline-block;
+  position: relative;
+  width: 45px;
+  line-height: 21px;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 100, 255, 0.6);
+  top: 0;
+  left: 2px;
+  z-index: -2;
+  height: 21px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.positionBarContainer.normal .positionBar .player .pitting .pittime.noShadow {
+  text-shadow: 2px 2px 2px transparent, 0 0 10px transparent;
+}
+.positionBarContainer.normal .positionBar .player .pitting .pittimea {
+  display: inline-block;
+  position: relative;
+  width: 45px;
+  top: -6px;
+  left: 2px;
+  text-align: rightcenter;
+  color: #fff;
+  background: rgba(0, 100, 255, 0.6);
+  top: 0;
+  z-index: -2;
+  height: 21px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.positionBarContainer.normal .positionBar .player .pitting .pittimea.noShadow {
+  text-shadow: 2px 2px 2px transparent, 0 0 10px transparent;
+}
+.positionBarContainer.normal .bestLap,
+.positionBarContainer.normal .currentLap,
+.positionBarContainer.normal .currentLapTime,
+.positionBarContainer.normal .currentPosition,
+.positionBarContainer.normal .currentPositionClass,
+.positionBarContainer.normal .incidentPoints,
+.positionBarContainer.normal .lastLap,
+.positionBarContainer.normal .sessionLaps,
+.positionBarContainer.normal .sessionLapsRemain,
+.positionBarContainer.normal .sessionTime,
+.positionBarContainer.normal .strengthOfField {
+  position: absolute;
+  top: 60px;
+  font-size: 32px;
+  text-align: center;
+}
+.positionBarContainer.normal .bestLap .label,
+.positionBarContainer.normal .currentLap .label,
+.positionBarContainer.normal .currentLapTime .label,
+.positionBarContainer.normal .currentPosition .label,
+.positionBarContainer.normal .currentPositionClass .label,
+.positionBarContainer.normal .incidentPoints .label,
+.positionBarContainer.normal .lastLap .label,
+.positionBarContainer.normal .sessionLaps .label,
+.positionBarContainer.normal .sessionLapsRemain .label,
+.positionBarContainer.normal .sessionTime .label,
+.positionBarContainer.normal .strengthOfField .label {
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+}
+.positionBarContainer.normal .sessionLapsRemain {
+  white-space: pre;
+}
+.positionBarContainer.normal .sessionTime .sessionRemainHours {
+  display: inline-block;
+  font-size: 32px;
+}
+.positionBarContainer.normal .sessionTime .sessionRemainHoursText {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  color: silver;
+}
+.positionBarContainer.normal .sessionTime .sessionRemainMinutes {
+  display: inline-block;
+  font-size: 32px;
+}
+.positionBarContainer.normal .sessionTime .sessionRemainMinutesText {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  color: silver;
+}
+.positionBarContainer.normal .sessionTime .sessionRemainSeconds {
+  display: inline-block;
+  font-size: 32px;
+}
+.positionBarContainer.normal .sessionTime .sessionRemainSecondsText {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  color: silver;
+}
+.positionBarContainer.normal .currentLapTime {
+  width: 130px;
+}
+.positionBarContainer.normal .currentPosition,
+.positionBarContainer.normal .currentPositionClass,
+.positionBarContainer.normal .sessionLaps {
+  width: 120px;
+}
+.positionBarContainer.normal .currentPositionClass {
+  text-align: center;
+}
+.positionBarContainer.normal .sessionTime {
+  width: 120px;
+  right: 10px;
+}
+.positionBarContainer.normal .incidentPoints {
+  width: 115px;
+  right: 10px;
+}
+.positionBarContainer.normal .bestLap,
+.positionBarContainer.normal .lastLap {
+  width: 130px;
+  right: 10px;
+}
+.positionBarContainer.normal .currentLap,
+.positionBarContainer.normal .strengthOfField {
+  width: 100px;
+  right: 10px;
+}
+.positionBarContainer.normal .currentLapTime {
+  left: 10px;
+}
+.positionBarContainer.normal .currentLapTime .label,
+.positionBarContainer.normal .currentLapTime.noTime .label {
+  padding-left: 0;
+}
+.positionBarContainer.normal .sessionLaps,
+.positionBarContainer.normal .sessionLapsRemain {
+  text-align: center;
+}
+.positionBarContainer.normal.noStandings .bestLap,
+.positionBarContainer.normal.noStandings .currentLap,
+.positionBarContainer.normal.noStandings .currentLapTime,
+.positionBarContainer.normal.noStandings .currentPosition,
+.positionBarContainer.normal.noStandings .currentPositionClass,
+.positionBarContainer.normal.noStandings .incidentPoints,
+.positionBarContainer.normal.noStandings .lastLap,
+.positionBarContainer.normal.noStandings .sessionLaps,
+.positionBarContainer.normal.noStandings .sessionLapsRemain,
+.positionBarContainer.normal.noStandings .sessionTime,
+.positionBarContainer.normal.noStandings .strengthOfField {
+  top: 0;
+}
+.positionBarContainer.normal.gameIsVR {
+  width: 84.9%;
+}
+.positionBarContainer.normal.noMultiClass .positionBar {
+  height: 40px;
+  padding-top: 0;
+}
+.positionBarContainer.relative {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+  top: 400px;
+  left: 1610px;
+  transform-origin: bottom right;
+  font-size: 14px;
+  text-overflow: ellipsis;
+}
+.positionBarContainer.relative .player {
+  height: 24px;
+  padding: 4px;
+  position: relative;
+  white-space: nowrap;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.positionBarContainer.relative .player:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.2);
+}
+.positionBarContainer.relative .player .position {
+  width: 21px;
+  text-align: center;
+  display: inline-block;
+}
+.positionBarContainer.relative .player .name {
+  width: 198px;
+}
+.positionBarContainer.relative .player .name,
+.positionBarContainer.relative .player.sCarNames .carName {
+  display: inline-block;
+  white-space: nowrap;
+  height: 28px;
+  overflow: hidden;
+  vertical-align: top;
+  text-overflow: ellipsis;
+}
+.positionBarContainer.relative .player.sCarNames .carName {
+  color: silver;
+  width: 120px;
+  margin-left: 2px;
+}
+.positionBarContainer.relative .player.sRankData .rankData {
+  display: inline-block;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  text-shadow: 2px 2px 2px transparent, 0 0 10px transparent;
+  background: #000;
+  color: #fff;
+  width: 68px;
+  vertical-align: top;
+  text-align: left;
+  margin-left: 2px;
+  margin-top: -1px;
+}
+.positionBarContainer.relative .player .carLogo {
+  display: inline-block;
+  position: absolute;
+  left: 203px;
+  width: 20px;
+  background: #fff;
+  text-align: center;
+  margin: -1px 0;
+}
+.positionBarContainer.relative .player .diff {
+  display: inline-block;
+  font-weight: 700;
+  padding: 0 0 0 2px;
+  margin-left: 5px;
+  width: 55px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.9);
+}
+.positionBarContainer.relative .player .stopStatus {
+  text-shadow: 0 0 0 transparent;
+  width: 21px;
+  text-align: center;
+  display: inline-block;
+}
+.positionBarContainer.relative .player .stopStatus.textShadow {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.positionBarContainer.relative .player.lapping {
+  color: #5997b0;
+}
+.positionBarContainer.relative .player.sameLap {
+  color: #fff;
+}
+.positionBarContainer.relative .player.lapped {
+  color: #b03a4a;
+}
+.positionBarContainer.relative .player.noRaceSession {
+  color: #fff;
+}
+.positionBarContainer.relative .player.noRaceSession.validLap {
+  color: #3cb371;
+}
+.positionBarContainer.relative .player.noRaceSession.noValidLap {
+  color: #b03a4a;
+}
+.positionBarContainer.relative .player.noRaceSession.isUser {
+  color: #fffd8e;
+}
+.positionBarContainer.relative .player.isUser {
+  background: rgba(50, 50, 50, 0.8);
+  color: #fffd8e;
+}
+.positionBarContainer.relative .player .classStyle {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: -3px;
+  width: 4px;
+}
+.positionBarContainer.relative .player .classLogo {
+  display: inline-block;
+  position: absolute;
+  left: -24px;
+  width: 20px;
+  top: 2px;
+}
+.positionBarContainer.relative .player .userId {
+  display: inline-block;
+  position: absolute;
+  background: hsla(0, 0%, 58.8%, 0.8);
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  left: -76px;
+  width: 75px;
+  text-align: center;
+  height: 20px;
+  top: 1px;
+  bottom: 1px;
+  padding-top: 2px;
+}
+.positionBarContainer.relative .player.sCarNames .name,
+.positionBarContainer.relative .player.sRankData .name {
+  width: 128px;
+}
+.positionBarContainer.relative .player.sRankData .carLogo {
+  left: 228px;
+}
+.positionBarContainer.relative .player.sClassLogos .userId {
+  left: -99px;
+}
+.positionBarContainer.relative .player.sCarLogos .name {
+  width: 173px;
+}
+.positionBarContainer.relative .player.sCarLogos .diff {
+  margin-left: 30px;
+}
+.positionBarContainer.relative .player.sCarLogos.sRankData .name {
+  width: 128px;
+}
+.positionBarContainer.relative .player.sGapsInSeconds .diff {
+  width: 45px;
+}
+.motec,
+.positionBarContainer.relative .bestLap,
+.positionBarContainer.relative .currentLap,
+.positionBarContainer.relative .currentPosition,
+.positionBarContainer.relative .incidentPoints,
+.positionBarContainer.relative .lastLap,
+.positionBarContainer.relative .sessionTime {
+  display: none;
+}
+.motec {
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 85px;
+  height: 100px;
+  border-radius: 2px;
+  transform-origin: bottom right;
+}
+.motec.shouldShow {
+  display: block;
+}
+.motec .speed {
+  position: absolute;
+  font-size: 20px;
+  bottom: 11px;
+  left: 50%;
+  text-transform: uppercase;
+  transform: translate(-50%);
+  opacity: 1;
+}
+.motec .rpm {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: #222;
+  border-radius: 2px;
+}
+.motec .rpm .rpmBar {
+  background: #fff;
+  height: 5px;
+  border-radius: 2px;
+}
+.motec .gear {
+  font-size: 55px;
+  font-family: EurasiaEx-Bold;
+  font-weight: 600;
+  position: absolute;
+  vertical-align: center;
+  text-align: center;
+  left: 44%;
+  transform: translate(-50%);
+  top: 19px;
+  line-height: 1;
+}
+.motec .gear.noElectronics {
+  font-size: 76px;
+  top: -1px;
+}
+.motec .engineMapBox {
+  position: absolute;
+  font-size: 10px;
+  width: 42px;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  border: 1px solid hsla(0, 0%, 100%, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+.motec .engineMapLabel {
+  left: 2px;
+}
+.motec .engineMap,
+.motec .engineMapLabel {
+  position: absolute;
+  font-size: 11px;
+  top: 0;
+  opacity: 1;
+}
+.motec .engineMap {
+  left: 18px;
+}
+.motec .engineBrakeBox {
+  position: absolute;
+  font-size: 10px;
+  width: 42px;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  border: 1px solid hsla(0, 0%, 100%, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+.motec .engineBrakeLabel {
+  left: 2px;
+}
+.motec .engineBrake,
+.motec .engineBrakeLabel {
+  position: absolute;
+  font-size: 11px;
+  top: 0;
+  opacity: 1;
+}
+.motec .engineBrake {
+  left: 18px;
+}
+.motec .tractionLevelBox {
+  position: absolute;
+  font-size: 10px;
+  width: 42px;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  border: 1px solid hsla(0, 0%, 100%, 0.8);
+  top: 0;
+  left: 50%;
+  opacity: 1;
+}
+.motec .tractionLevelLabel {
+  position: absolute;
+  font-size: 11px;
+  top: 0;
+  left: 2px;
+  opacity: 1;
+}
+.motec .tractionLevel {
+  position: absolute;
+  font-size: 11px;
+  top: 0;
+  left: 18px;
+  opacity: 1;
+}
+.motec .brakeBiasBox {
+  position: absolute;
+  font-size: 10px;
+  width: 42px;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  border: 1px solid hsla(0, 0%, 100%, 0.8);
+  top: 0;
+  left: 50%;
+  opacity: 1;
+}
+.motec .brakeBiasLabel {
+  left: 2px;
+}
+.motec .brakeBias,
+.motec .brakeBiasLabel {
+  position: absolute;
+  font-size: 11px;
+  top: 0;
+  opacity: 1;
+}
+.motec .brakeBias {
+  left: 18px;
+}
+.motec.showEM .engineBrakeBox,
+.motec.showTC .brakeBiasBox {
+  top: 12px;
+}
+.motec.plBBlink {
+  animation: plBBlinker 0.5s linear infinite;
+}
+@keyframes plBBlinker {
+  50% {
+    background: #0000c8;
+  }
+  0% {
+    background: #c80000;
+  }
+}
+.progress {
+  display: none;
+  position: relative;
+}
+.progress.shouldShow {
+  display: block;
+}
+.progress .estimateContainer {
+  top: 350px;
+  width: 299px;
+}
+.progress .estimate,
+.progress .estimateContainer {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.progress .estimate {
+  top: 0;
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 5px 10px;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.progress .estimate .qualifyInfo {
+  position: absolute;
+  top: 61px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 300px;
+  white-space: nowrap;
+  font-size: 15px;
+  color: #fff;
+}
+.progress .estimate .qualifyInfo .esimatedLapTime {
+  position: absolute;
+  left: 0;
+  padding: 2px;
+}
+.progress .estimate .qualifyInfo .esimatedLapTime .Estmono {
+  margin-left: 1px;
+}
+.progress .estimate .qualifyInfo .esimatedLapTime .Estmono.isGerman {
+  margin-left: 2px;
+}
+.progress .estimate .qualifyInfo .esimatedLapTime .Estmono.isPortuguese {
+  margin-left: 10px;
+}
+.progress .estimate .qualifyInfo .esimatedLapTime .Estmono.isFrench {
+  margin-left: 26px;
+}
+.progress .estimate .qualifyInfo .esimatedLapTime .Estmono.isSpanish {
+  margin-left: 15px;
+}
+.progress .estimate .qualifyInfo .esimatedLapTime .Estmono.isPolish {
+  margin-left: 17px;
+}
+.progress .estimate .qualifyInfo .esimatedPosition {
+  position: absolute;
+  right: 0;
+  padding: 2px;
+}
+.progress .lastLapContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 5px 10px;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.progress .lastLapContainer .laps {
+  position: absolute;
+  top: 61px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 300px;
+  white-space: nowrap;
+  font-size: 15px;
+  color: #fff;
+}
+.progress .lastLapContainer .laps .lapLabel {
+  left: 0;
+  padding: 2px;
+}
+.progress .lastLapContainer .laps .lastLap {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 55px;
+  padding: 2px;
+}
+.progress .lastLapContainer .laps .lastLap.isGerman {
+  left: 77px;
+}
+.progress .lastLapContainer .laps .lastLap.isPortuguese {
+  left: 73px;
+}
+.progress .lastLapContainer .laps .lastLap.isFrench {
+  left: 88px;
+}
+.progress .lastLapContainer .laps .lastLap.isSpanish {
+  left: 82px;
+}
+.progress .lastLapContainer .laps .lastLap.isItalian {
+  left: 72px;
+}
+.progress .lastLapContainer .laps .lastLap.isPolish {
+  margin-left: 23px;
+}
+.progress .deltaNextContainer {
+  position: absolute;
+  top: 54px;
+  width: 299px;
+  background: #000;
+  left: 50%;
+  transform: translate(-50%);
+}
+.progress.deltaTextOn .deltaNextContainer {
+  top: 69px;
+}
+.progress.deltaTextOn .qualifyInfo {
+  top: 75px;
+}
+.progress .deltaNext {
+  height: 3px;
+  background: #fff;
+}
+.progress .simple {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 25px;
+  height: 21px;
+  width: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px 5px 0 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.progress .simple .bad,
+.progress .simple .good {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #fff;
+}
+.progress .simple .good {
+  border-left: 1px solid #222;
+  left: 50%;
+  background: #09d83d;
+  border-radius: 0 4px 0 0;
+}
+.progress .simple .bad {
+  border-right: 1px solid #222;
+  right: 50%;
+  background: #7a1616;
+  border-radius: 4px 0 0 0;
+}
+.progress.overallGaining .estimate {
+  color: #09d83d;
+}
+.progress.overallLoosing .estimate {
+  color: #de1616;
+}
+.progress.notDelta .estimate {
+  color: #fff;
+}
+.progress .sectors {
+  position: absolute;
+  top: 35px;
+  width: 100%;
+  left: 0;
+}
+.progress .sectors .sector {
+  height: 5px;
+  background: #292929;
+  display: inline-block;
+  width: 10%;
+  position: relative;
+  width: 33.333%;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.progress .sectors .sector:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-right: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+}
+.progress .sectors .sector:first-child:after {
+  border-left: 1px solid hsla(0, 0%, 100%, 0.1);
+}
+.progress.estims .laps {
+  top: 79px;
+}
+.progress.showAsTime .qualifyInfo {
+  top: 76px;
+}
+.progress.showAsTime .sectors {
+  top: 45px;
+}
+.progress.showAsTime .sector {
+  height: 20px;
+}
+.progress.showAsTime .deltaNextContainer {
+  top: 71px;
+}
+.progress.showAsTime.deltaTextOn .deltaNextContainer {
+  top: 85px;
+}
+.progress.showAsTime.deltaTextOn .qualifyInfo {
+  top: 91px;
+}
+.progress.showAsTime .laps {
+  top: 76px;
+}
+.progress.showAsTime.estims .laps {
+  top: 95px;
+}
+.progress.pbl .lastLap {
+  color: #0f0;
+}
+.progress.gbl .lastLap {
+  color: #f0f;
+}
+.spottingContainer {
+  display: none;
+  width: 140px;
+  height: 140px;
+  bottom: 40px;
+  right: 270px;
+  position: absolute;
+  background: url(files/radar2.2973d1a4e46993f300c52e1c1a392714.png);
+  opacity: 0;
+}
+.spottingContainer.shouldShow {
+  display: block;
+}
+.spottingContainer.autoHide.noneClose {
+  display: none;
+}
+.spottingContainer.autoHide.someoneClose {
+  display: block;
+}
+.spottingContainer .warning {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.spottingContainer .warning.left {
+  background: url(files/gridWarningLeft.fb73cfd34ae03a5d0b33025dac382449.png);
+}
+.spottingContainer .warning.right {
+  background: url(files/gridWarningRight.1fe5a6641a82b6e43acea3cd73477fd1.png);
+}
+.spotting {
+  transform-origin: top left;
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  pointer-events: none;
+}
+.spotting .driver {
+  transform-origin: top left;
+  width: 9px;
+  height: 23px;
+  position: absolute;
+  border-radius: 3px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 10px #000, 0 0 10px #000, 0 0 10px #000;
+  font-size: 10px;
+}
+.spotting .driver.isUser {
+  background: #fff !important;
+}
+.spotting .driver.isFrontNotShow {
+  background: transparent;
+  box-shadow: 0 0 0 transparent;
+  text-shadow: 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
+}
+.spotting .blib {
+  transform-origin: top left;
+  top: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border: 2px solid #fff;
+}
+.aids,
+.spotting .blib {
+  position: absolute;
+  left: 50%;
+}
+.aids {
+  top: 1030px;
+}
+.aids .inner {
+  transform: translate(0);
+  border-radius: 50px;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.aids .aid {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  fill: hsla(0, 0%, 100%, 0.3);
+}
+.aids .aid.state-5 svg {
+  fill: #c41b1b;
+}
+.aids .svgIcon svg {
+  height: 35px;
+  width: 35px;
+}
+.crewChief {
+  position: absolute;
+  top: 300px;
+  left: 1690px;
+  transform: translate(-50%, -50%);
+}
+.crewChief * {
+  text-align: top;
+}
+.crewChief .driverName,
+.crewChief .meta {
+  padding: 5px 15px;
+  margin: 1px;
+  position: relative;
+}
+.crewChief .driverName:after,
+.crewChief .meta:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  transform: skew(-20deg, 0);
+  z-index: -1;
+}
+.crewChief .driverName .inner {
+  text-transform: uppercase;
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.crewChief .meta .waveForm {
+  position: relative;
+  top: 2px;
+  margin-left: 10px;
+  height: 14px;
+}
+.overtakingAidsContainer {
+  width: 250px;
+  height: 80px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translateY(302px) scale3d(2.88, 2.88, 1);
+  transform-origin: 0 0;
+  overflow: hidden;
+  background-color: hsla(0, 0%, 100%, 0);
+  background-size: 250px 80px;
+}
+.overtakingAidsContainer .drsLabelBox {
+  display: block;
+  border-radius: 20px 0 0;
+  border: 0 solid hsla(0, 0%, 100%, 0.8);
+  width: 100px;
+  height: 40px;
+  left: 0;
+  top: 40px;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.overtakingAidsContainer .drsLabelBox .drsLabelBoxText {
+  width: 100px;
+  height: 40px;
+  white-space: pre;
+  font-family: Segoe UI;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.8);
+  font-style: normal;
+  font-size: 32px;
+  justify-content: flex-end;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  margin: 2px 3px -1px;
+}
+.overtakingAidsContainer .drsLabelBox.showP2P {
+  border-width: 0 0 1px;
+  top: 0;
+}
+.overtakingAidsContainer .drsAmountBox {
+  display: block;
+  width: 150px;
+  height: 40px;
+  left: 100px;
+  top: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+  border: 0 solid hsla(0, 0%, 100%, 0.8);
+}
+.overtakingAidsContainer .drsAmountBox.showP2P {
+  border-width: 0 0 1px;
+  top: 0;
+}
+.overtakingAidsContainer .drsAmountTextBox {
+  display: block;
+  width: 150px;
+  height: 40px;
+  left: 100px;
+  top: 40px;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.overtakingAidsContainer .drsAmountTextBox .drsAmountText {
+  width: 150px;
+  height: 40px;
+  white-space: pre;
+  font-family: Segoe UI;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.8);
+  font-style: normal;
+  font-size: 32px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  margin: 2px 3px -1px;
+}
+.overtakingAidsContainer .drsAmountTextBox .drsAmountText.isInfinite {
+  font-size: 48px;
+  margin: -10px 0 0;
+}
+.overtakingAidsContainer .drsAmountTextBox.showP2P {
+  top: 0;
+}
+.overtakingAidsContainer .p2pLabelBox {
+  display: block;
+  border-radius: 20px 0 0;
+  border: 0 solid hsla(0, 0%, 100%, 0.8);
+  width: 100px;
+  height: 40px;
+  left: 0;
+  top: 40px;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.overtakingAidsContainer .p2pLabelBox .p2pLabelBoxText {
+  width: 100px;
+  height: 40px;
+  white-space: pre;
+  font-family: Segoe UI;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.8);
+  font-style: normal;
+  font-size: 32px;
+  justify-content: flex-end;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  margin: 2px 3px -1px;
+}
+.overtakingAidsContainer .p2pLabelBox.showDRS {
+  border-radius: 0 0 0;
+  border-width: 1px 0 0;
+}
+.overtakingAidsContainer .p2pAmountBox {
+  width: 150px;
+  left: 100px;
+  top: 40px;
+  border: 0 solid hsla(0, 0%, 100%, 0.8);
+}
+.overtakingAidsContainer .p2pAmountBox,
+.overtakingAidsContainer .p2pAmountBox .p2pTimeBar {
+  display: block;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.overtakingAidsContainer .p2pAmountBox .p2pTimeBar {
+  width: 0;
+  left: 0;
+  top: 0;
+}
+.overtakingAidsContainer .p2pAmountBox .p2pTimeBar.showDRS {
+  height: 39px;
+}
+.overtakingAidsContainer .p2pAmountBox.showDRS {
+  border-radius: 0 0 0;
+  border-width: 1px 0 0;
+}
+.overtakingAidsContainer .p2pAmountBox.showDRS .p2pTimeBar {
+  height: 40px;
+}
+.overtakingAidsContainer .p2pAmountTextBox {
+  display: block;
+  width: 150px;
+  height: 40px;
+  left: 100px;
+  top: 40px;
+  background: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.overtakingAidsContainer .p2pAmountTextBox .p2pAmountText {
+  width: 150px;
+  height: 40px;
+  white-space: pre;
+  font-family: Segoe UI;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.8);
+  font-style: normal;
+  font-size: 32px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  margin: 2px 3px -1px;
+}
+.damage {
+  position: absolute;
+  top: 930px;
+  left: 1890px;
+  padding: 10px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.damage .carDamage {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  width: 210px;
+  margin-bottom: 20px;
+}
+.damage .carDamage .part .label {
+  display: inline-block;
+  font-size: 14px;
+  width: 90px;
+  position: relative;
+  top: 2px;
+}
+.damage .carDamage .part .barContainer {
+  display: inline-block;
+  width: 110px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  border: 1px solid #666;
+  margin: -2px -5px;
+}
+.damage .carDamage .part .barContainer .bar {
+  height: 8px;
+  border-radius: 3px;
+  background: #fff;
+}
+.damage .carDamage .part.bad {
+  color: orange;
+}
+.damage .carDamage .part.bad .barContainer .bar {
+  background: orange;
+}
+.damage .carDamage .part.broken {
+  color: red;
+}
+.damage .carDamage .part.broken .barContainer .bar {
+  background: red;
+}
+.tires {
+  position: absolute;
+  height: 100px;
+  width: 130px;
+  top: 940px;
+  left: 1750px;
+  margin-right: 10px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  opacity: 1;
+}
+.tires .wheel {
+  background: #000;
+  width: 61px;
+  height: 46px;
+  float: left;
+  margin: 2px;
+  position: relative;
+  border-radius: 5px;
+}
+.tires .wheel .tempcenter {
+  left: 35%;
+}
+.tires .wheel .tempcenter,
+.tires .wheel .templeft {
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 3px;
+  z-index: 11;
+  font-size: 10px;
+  width: 33%;
+  text-align: center;
+}
+.tires .wheel .templeft {
+  left: 2%;
+}
+.tires .wheel .tempright {
+  position: absolute;
+  bottom: 100%;
+  left: 68%;
+  margin-bottom: 3px;
+  z-index: 11;
+  font-size: 10px;
+  width: 33%;
+  text-align: center;
+}
+.tires .wheel.rearLeft .tempcenter,
+.tires .wheel.rearLeft .templeft,
+.tires .wheel.rearLeft .tempright,
+.tires .wheel.rearRight .tempcenter,
+.tires .wheel.rearRight .templeft,
+.tires .wheel.rearRight .tempright {
+  position: absolute;
+  bottom: auto;
+  top: 100%;
+  margin-top: 3px;
+  z-index: 11;
+  font-size: 10px;
+}
+.tires .wheel.frontLeft .gripLevel,
+.tires .wheel.rearLeft .gripLevel {
+  left: -8px;
+}
+.tires .wheel.frontRight .gripLevel,
+.tires .wheel.rearRight .gripLevel {
+  right: -8px;
+}
+.tires .wheel:after {
+  display: block;
+  content: "";
+  border-radius: 3px;
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+}
+.tires .wheel .tireDirtOverlay,
+.tires .wheel:after {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+.tires .wheel .tireDirtOverlay {
+  border-radius: 5px;
+  border: 2px solid red;
+}
+.tires .wheel .brake {
+  position: absolute;
+  width: 6px;
+  border-radius: 5px;
+  background: grey;
+  border: 1px solid #000;
+  top: 10px;
+  bottom: 10px;
+}
+.tires .wheel .brake.frontLeft,
+.tires .wheel .brake.rearLeft {
+  left: -4px;
+}
+.tires .wheel .brake.frontRight,
+.tires .wheel .brake.rearRight {
+  right: -4px;
+}
+.tires .wheel .tireWearContainer {
+  top: 2px;
+  right: 4px;
+  left: 4px;
+  bottom: 2px;
+  position: absolute;
+}
+.tires .wheel .tireWearContainer .tireWearLeft {
+  left: 0;
+}
+.tires .wheel .tireWearContainer .tireWearCenter,
+.tires .wheel .tireWearContainer .tireWearLeft {
+  background: #222;
+  border-top: 1px solid #555;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 33%;
+}
+.tires .wheel .tireWearContainer .tireWearCenter {
+  left: 33%;
+}
+.tires .wheel .tireWearContainer .tireWearRight {
+  background: #222;
+  border-top: 1px solid #555;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 66%;
+  right: 0;
+  width: 33%;
+}
+.tires .wheel .tireWearContainer .tireWearNumber {
+  bottom: 50%;
+  width: 100px;
+}
+.tires .wheel .tireWearContainer .tirePressureNumber,
+.tires .wheel .tireWearContainer .tireWearNumber {
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+  margin-bottom: 3px;
+  z-index: 11;
+  font-size: 12px;
+  text-align: center;
+}
+.tires .wheel .tireWearContainer .tirePressureNumber {
+  bottom: 5%;
+}
+.tires .wheel .tireWearContainer .tirePuncture {
+  margin: 2px 0 0 9px;
+}
+.tires .wearLaps {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 12px;
+  width: 120px;
+  font-size: 12px;
+  background: transparent;
+  border-radius: -5px;
+  text-align: center;
+  color: #fff;
+}
+.tiresa {
+  position: absolute;
+  height: 100px;
+  width: 50px;
+  top: 940px;
+  left: 1750px;
+  margin-right: 10px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  opacity: 1;
+}
+.tiresa .wheel {
+  background: #000;
+  width: 21px;
+  height: 46px;
+  float: left;
+  margin: 2px;
+  position: relative;
+  border-radius: 5px;
+}
+.tiresa .wheel .temp {
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 3px;
+  z-index: 11;
+  font-size: 10px;
+  width: 100%;
+  text-align: center;
+}
+.tiresa .wheel.rearLeft .temp,
+.tiresa .wheel.rearRight .temp {
+  position: absolute;
+  bottom: auto;
+  top: 100%;
+  margin-top: 3px;
+  z-index: 11;
+  font-size: 10px;
+}
+.tiresa .wheel.frontLeft .gripLevel,
+.tiresa .wheel.rearLeft .gripLevel {
+  left: -8px;
+}
+.tiresa .wheel.frontRight .gripLevel,
+.tiresa .wheel.rearRight .gripLevel {
+  right: -8px;
+}
+.tiresa .wheel:after {
+  display: block;
+  content: "";
+  border-radius: 3px;
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+}
+.tiresa .wheel .tireDirtOverlay,
+.tiresa .wheel:after {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+.tiresa .wheel .tireDirtOverlay {
+  border-radius: 5px;
+  border: 2px solid red;
+}
+.tiresa .wheel .brake {
+  position: absolute;
+  width: 6px;
+  border-radius: 5px;
+  background: grey;
+  border: 1px solid #000;
+  top: 10px;
+  bottom: 10px;
+}
+.tiresa .wheel .brake.frontLeft,
+.tiresa .wheel .brake.rearLeft {
+  left: -4px;
+}
+.tiresa .wheel .brake.frontRight,
+.tiresa .wheel .brake.rearRight {
+  right: -4px;
+}
+.tiresa .wheel .tireWearContainer {
+  top: 3px;
+  right: 3px;
+  left: 3px;
+  bottom: 3px;
+  position: absolute;
+}
+.tiresa .wheel .tireWearContainer .tireWear {
+  background: #222;
+  border-top: 1px solid #555;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.tiresa .wearLaps {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 12px;
+  width: 120px;
+  font-size: 12px;
+  background: transparent;
+  border-radius: -5px;
+  text-align: center;
+  color: #fff;
+}
+.tiresa .tirePuncture {
+  height: 50px;
+  width: 50px;
+}
+.inputs {
+  background: red;
+  padding: 2px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+  height: 100px;
+  position: absolute;
+  top: 940px;
+  left: 1690px;
+  margin-right: 70px;
+  border-radius: 2px;
+  width: 46px;
+}
+.inputs.low {
+  background: rgba(255, 0, 0, 0.7);
+}
+.inputs .barContainer {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  top: 0;
+  margin: 0 1px;
+  width: 12px;
+  display: inline-block;
+  position: relative;
+  border-radius: 2px;
+  border: 1px solid hsla(0, 0%, 100%, 0.15);
+}
+.inputs .barContainer .bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+.inputs .barContainer .clutchPedal {
+  background: #aaa;
+}
+.inputs .barContainer .brakePedal {
+  background: red;
+}
+.inputs .barContainer .throttlePedal {
+  background: green;
+}
+.inputs .clutchTextContainer {
+  left: 20%;
+}
+.inputs .brakeTextContainer,
+.inputs .clutchTextContainer {
+  display: inline-block;
+  position: absolute;
+  font-size: 9px;
+  height: 12px;
+  margin: 0;
+  top: 2px;
+  bottom: 0;
+  transform: translate(-50%);
+}
+.inputs .brakeTextContainer {
+  left: 50%;
+}
+.inputs .throttleTextContainer {
+  display: inline-block;
+  position: absolute;
+  font-size: 9px;
+  height: 12px;
+  margin: 0;
+  top: 2px;
+  bottom: 0;
+  left: 80%;
+  transform: translate(-50%);
+}
+.inputs.showNumbers .barContainer {
+  height: 90%;
+  top: 10%;
+}
+.inputs.hasWheel {
+  height: 100px;
+}
+.inputs.hasWheel .barContainer {
+  height: 60%;
+  top: 0;
+}
+.inputs.hasWheel.showNumbers .barContainer {
+  height: 50%;
+  top: 10%;
+}
+.inputs.hasWheel .steeringWheel {
+  position: absolute;
+  top: 60%;
+  left: 4px;
+  transform-origin: 19px 19px;
+  margin-top: 1px;
+  background: transparent;
+  border-radius: 100%;
+}
+.inputs.hasWheel .steeringWheel svg {
+  margin: 0;
+  transform-origin: top left;
+  width: 38px;
+  fill: #fff;
+}
+.fuel {
+  background: red;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+  height: 100px;
+  position: absolute;
+  top: 940px;
+  left: 1660px;
+  margin-right: 70px;
+  border-radius: 2px;
+  width: 46px;
+  width: 22px;
+  right: 150px;
+  padding: 5px 5px 30px;
+}
+.fuel.low {
+  background: rgba(255, 0, 0, 0.7);
+}
+.fuel .barContainer {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  margin: 0 1px;
+  width: 14px;
+  left: 45%;
+  transform: translate(-50%);
+  display: inline-block;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid hsla(0, 0%, 100%, 0.15);
+}
+.fuel .barContainer .bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background: linear-gradient(45deg, #e7e7e7, #c9c9c9);
+}
+.fuel .barContainer .bar:after {
+  position: absolute;
+  display: block;
+  content: "";
+  border-radius: 3px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+}
+.fuel .barContainer {
+  top: 10px;
+  height: 53px;
+}
+.fuel .svgIcon {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: 1px;
+  transform: translate(-50%, -50%);
+}
+.fuel .svgIcon svg {
+  fill: #fff;
+}
+.fuel .fuelLeft,
+.fuel .fuelPerLap {
+  position: absolute;
+  font-size: 9px;
+  left: -5px;
+  right: -5px;
+  text-align: center;
+}
+.fuel .fuelPerLap {
+  top: 3px;
+}
+.fuel .fuelLeft {
+  bottom: 20px;
+}
+.theClock {
+  display: none;
+  position: absolute;
+  top: 100px;
+  width: 100px;
+  left: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 2px;
+}
+.theClock.shouldShow {
+  display: block;
+}
+.theClock .theTime {
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 28px;
+  padding: 0 3px 3px;
+}
+.cornerNamesContainer {
+  width: 505px;
+  height: 110px;
+  border-radius: 5px;
+  border: 1px solid hsla(0, 0%, 100%, 0);
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.cornerNamesContainer,
+.cornerNamesContainer .trackNameTextContainer {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.cornerNamesContainer .trackNameTextContainer {
+  width: 68px;
+  height: 28px;
+  left: 0;
+  top: 2px;
+  background-color: hsla(0, 0%, 100%, 0);
+}
+.cornerNamesContainer .trackNameTextContainer .trackNameTextText {
+  width: 55px;
+  height: 28px;
+  white-space: pre;
+  font-weight: 350;
+  color: #ffffcd;
+  font-size: 22px;
+  margin: 0;
+}
+.cornerNamesContainer .trackNameContainer {
+  display: block;
+  width: 302px;
+  height: 28px;
+  left: 60px;
+  top: 2px;
+  background-color: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.cornerNamesContainer .trackNameContainer .trackNameText {
+  width: 302px;
+  height: 21px;
+  white-space: pre;
+  font-weight: 350;
+  color: #fff;
+  font-size: 22px;
+  margin: 0;
+}
+.cornerNamesContainer .trackNameContainer.isFrench,
+.cornerNamesContainer .trackNameContainer.isGerman {
+  left: 68px;
+}
+.cornerNamesContainer .trackNameContainer.isSpanish {
+  left: 70px;
+}
+.cornerNamesContainer .layoutNameTextContainer {
+  display: block;
+  width: 65px;
+  height: 28px;
+  left: 0;
+  top: 28px;
+  background-color: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.cornerNamesContainer .layoutNameTextContainer .layoutNameTextText {
+  width: 55px;
+  height: 28px;
+  white-space: pre;
+  font-weight: 350;
+  color: #ffffcd;
+  font-size: 22px;
+  margin: 0;
+}
+.cornerNamesContainer .layoutNameContainer {
+  display: block;
+  width: 302px;
+  height: 28px;
+  left: 60px;
+  top: 28px;
+  background-color: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.cornerNamesContainer .layoutNameContainer .layoutNameText {
+  width: 302px;
+  height: 21px;
+  white-space: pre;
+  font-weight: 350;
+  color: #fff;
+  font-size: 22px;
+  margin: 0;
+}
+.cornerNamesContainer .layoutNameContainer.isFrench,
+.cornerNamesContainer .layoutNameContainer.isGerman {
+  left: 68px;
+}
+.cornerNamesContainer .layoutNameContainer.isSpanish {
+  left: 70px;
+}
+.cornerNamesContainer .trackLengthTextContainer {
+  display: block;
+  width: 68px;
+  height: 28px;
+  left: 360px;
+  top: 2px;
+  background-color: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.cornerNamesContainer .trackLengthTextContainer .trackLengthText {
+  width: 55px;
+  height: 28px;
+  white-space: pre;
+  font-weight: 350;
+  color: #ffffcd;
+  font-size: 22px;
+  margin: 0;
+}
+.cornerNamesContainer .trackLengthContainer {
+  display: block;
+  width: 85px;
+  height: 28px;
+  left: 420px;
+  top: 2px;
+  background-color: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.cornerNamesContainer .trackLengthContainer .trackLengthNumber {
+  width: 85px;
+  height: 21px;
+  white-space: pre;
+  font-weight: 350;
+  color: #fff;
+  font-size: 22px;
+  text-align: right;
+  margin: 0;
+}
+.cornerNamesContainer .trackDistTextContainer {
+  display: block;
+  width: 65px;
+  height: 28px;
+  left: 360px;
+  top: 28px;
+  background-color: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.cornerNamesContainer .trackDistTextContainer .trackDistText {
+  width: 65px;
+  height: 28px;
+  white-space: pre;
+  font-weight: 350;
+  color: #ffffcd;
+  font-size: 22px;
+  margin: 0;
+}
+.cornerNamesContainer .trackDistContainer {
+  display: block;
+  width: 85px;
+  height: 28px;
+  left: 420px;
+  top: 28px;
+  background-color: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.cornerNamesContainer .trackDistContainer .trackDistNumber {
+  width: 85px;
+  height: 28px;
+  white-space: pre;
+  font-weight: 350;
+  color: #fff;
+  font-size: 22px;
+  text-align: right;
+  margin: 0;
+}
+.cornerNamesContainer .cornerNameContainer {
+  display: block;
+  width: 505px;
+  height: 54px;
+  left: 5px;
+  top: 51px;
+  background-color: hsla(0, 0%, 100%, 0);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.cornerNamesContainer .cornerNameContainer .cornerNameText {
+  width: 505px;
+  height: 54px;
+  white-space: pre;
+  font-weight: 700;
+  color: #1e90ff;
+  font-size: 40px;
+  text-align: center;
+  margin: 6px 0;
+}
+.cornerNamesContainer.showCorners,
+.cornerNamesContainer.showDetails {
+  height: 55px;
+}
+.cornerNamesContainer.showCorners .cornerNameContainer {
+  top: 1px;
+}
+.cornerNamesContainer.showBoth {
+  height: 110px;
+}
+.cornerNamesContainer.theSillyShit {
+  background: transparent;
+}
+.cornerNamesContainer.theSillyShit .cornerNameContainer .cornerNameText {
+  color: #fff;
+}
+.tvTowerContainer {
+  position: absolute;
+  top: 50px;
+  left: 15px;
+  width: 155px;
+  height: 39px;
+  transform-origin: bottom right;
+}
+.tvTowerContainer .tvTower .header {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+.tvTowerContainer .tvTower .headerIcon {
+  height: 37px;
+  width: 153px;
+}
+.tvTowerContainer .tvTower .standingsSessionInfo {
+  background: rgba(0, 0, 0, 0.8);
+  width: 155px;
+  height: 28px;
+}
+.tvTowerContainer .tvTower .standingsSessionInfo .standingsSessionInfoText {
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  left: 7px;
+  bottom: -7px;
+  height: 0;
+}
+.tvTowerContainer
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionNameText {
+  color: silver;
+  font-style: bold;
+}
+.tvTowerContainer
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHours {
+  display: inline-block;
+  color: #fff;
+}
+.tvTowerContainer
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText {
+  display: inline-block;
+  font-size: 8px;
+  color: silver;
+  font-style: bold;
+}
+.tvTowerContainer
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutes {
+  display: inline-block;
+  color: #fff;
+  font-style: bold;
+}
+.tvTowerContainer
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText {
+  display: inline-block;
+  font-size: 8px;
+  color: silver;
+  font-style: bold;
+}
+.tvTowerContainer
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSeconds {
+  display: inline-block;
+  color: #fff;
+  font-style: bold;
+}
+.tvTowerContainer
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  display: inline-block;
+  font-size: 8px;
+  color: silver;
+  font-style: bold;
+}
+.tvTowerContainer .tvTower .standingsSessionInfo .sessionFlags {
+  transform: skew(-15deg);
+  position: relative;
+  margin: 0 10px 0 0;
+  width: 44px;
+  height: 28px;
+  left: 107px;
+}
+.tvTowerContainer .tvTower .standingsSessionInfo .sessionFlags img {
+  z-index: 10;
+  width: 55px;
+  height: 31px;
+}
+.tvTowerContainer .tvTower .mandatoryPitHeader {
+  height: 25px;
+  text-align: center;
+  font-size: 12px;
+  padding: 2px;
+  line-height: 20px;
+}
+.tvTowerContainer .tvTower .mandatoryPitHeaderText {
+  color: #fff;
+  z-index: 4;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.tvTowerContainer .tvTower .player {
+  position: relative;
+  white-space: nowrap;
+  height: 23px;
+  line-height: 23px;
+  background: rgba(0, 0, 0, 0.6);
+}
+.tvTowerContainer .tvTower .player:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.65);
+}
+.tvTowerContainer .tvTower .player .position {
+  background: rgba(0, 0, 0, 0.5);
+  width: 30px;
+  color: #fff;
+}
+.tvTowerContainer .tvTower .player .name,
+.tvTowerContainer .tvTower .player .position {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  display: inline-block;
+}
+.tvTowerContainer .tvTower .player .name {
+  padding: 0 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: top;
+  width: 51px;
+  margin-left: -1px;
+}
+.tvTowerContainer .tvTower .player .rankData {
+  display: inline-block;
+  border-radius: 2px;
+  font-size: 16px;
+  padding: 0 0 0 2px;
+  height: 21px;
+  text-shadow: 2px 2px 2px transparent, 0 0 10px transparent;
+  background: #000;
+  color: #fff;
+  width: 78px;
+  vertical-align: top;
+  margin: 1px 2px 0 0;
+  line-height: 20px;
+}
+.tvTowerContainer .tvTower .player .tyreChoiceContainer {
+  text-align: center;
+  width: 21px;
+  height: 21px;
+  display: inline-block;
+}
+.tvTowerContainer .tvTower .player .tyreChoice {
+  text-align: center;
+  width: 19px;
+  height: 19px;
+  vertical-align: bottom;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+.tvTowerContainer .tvTower .player .manufacturerIcon {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  background: #fff;
+  line-height: 14px;
+}
+.tvTowerContainer .tvTower .player .manufacturerIcon img {
+  vertical-align: center;
+  height: 18px;
+  width: 21px;
+}
+.tvTowerContainer .tvTower .player .diff {
+  width: 75px;
+}
+.tvTowerContainer .tvTower .player .diff,
+.tvTowerContainer .tvTower .player .pitting {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  display: inline-block;
+  text-align: center;
+}
+.tvTowerContainer .tvTower .player .pitting {
+  position: relative;
+  width: 25px;
+  vertical-align: center;
+  color: #fff;
+  top: 0;
+  z-index: -1;
+  height: 23px;
+  line-height: 23px;
+}
+.tvTowerContainer .tvTower .player .pitting.noShadow {
+  text-shadow: 2px 2px 2px transparent, 0 0 10px transparent;
+}
+.tvTowerContainer .tvTower .player .pitting .cheqFlag {
+  position: relative;
+  vertical-align: center;
+  top: 2.5px;
+  height: 18px;
+  width: 21px;
+}
+.tvTowerContainer .tvTower .player .pitting .pittime {
+  display: inline-block;
+  position: relative;
+  width: 45px;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 100, 255, 0.6);
+  top: 0;
+  z-index: -1;
+  height: 23px;
+  left: 4px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.tvTowerContainer .tvTower .player .pitting .pittime.noShadow {
+  text-shadow: 2px 2px 2px transparent, 0 0 10px transparent;
+}
+.tvTowerContainer .tvTower .player .pitting .pittimea {
+  display: inline-block;
+  position: relative;
+  width: 45px;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 100, 255, 0.6);
+  top: 0;
+  z-index: -1;
+  height: 23px;
+  left: 4px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.tvTowerContainer .tvTower .player .pitting .pittimea.noShadow {
+  text-shadow: 2px 2px 2px transparent, 0 0 10px transparent;
+}
+.tvTowerContainer .tvTower .player .notFinishBlock {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  background: rgba(55, 55, 55, 0.7);
+  color: rgba(55, 55, 55, 0.7);
+  width: 100%;
+  padding: 0 2px;
+  text-align: center;
+  z-index: 5;
+}
+.tvTowerContainer .tvTower .player .podiumSeparator {
+  display: block;
+  position: absolute;
+  height: 2px;
+  left: 0;
+  background: hsla(0, 0%, 100%, 0.7);
+  color: hsla(0, 0%, 100%, 0);
+  width: 100%;
+  padding: 0 2px;
+  font-size: 1px;
+  text-align: center;
+  z-index: 5;
+}
+.tvTowerContainer .tvTower .player.lapped,
+.tvTowerContainer .tvTower .player.lapping,
+.tvTowerContainer .tvTower .player.sameLap {
+  color: #fff;
+}
+.tvTowerContainer .tvTower .player.isUser {
+  color: #03a9f4;
+  height: 23px;
+}
+.tvTowerContainer .tvTower .player .classStyle {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 1px;
+  bottom: 0;
+  left: 30px;
+  width: 21px;
+  height: 21px;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  overflow: visible;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.tvTowerContainer .tvTower .player .bestLap {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 1px;
+  left: 0;
+  width: 3px;
+  height: 21px;
+}
+.tvTowerContainer .tvTower .currentLap,
+.tvTowerContainer .tvTower .currentPosition,
+.tvTowerContainer .tvTower .sessionTime {
+  display: none;
+}
+.tvTowerContainer.carLogosCont {
+  width: 176px;
+}
+.tvTowerContainer.carLogosCont .tvTower .headerIcon {
+  width: 174px;
+  height: 42px;
+}
+.tvTowerContainer.carLogosCont .tvTower .standingsSessionInfo {
+  width: 176px;
+  height: 32px;
+}
+.tvTowerContainer.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText {
+  font-size: 18px;
+}
+.tvTowerContainer.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText,
+.tvTowerContainer.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText,
+.tvTowerContainer.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  font-size: 10px;
+}
+.tvTowerContainer.carLogosCont .tvTower .sessionFlags {
+  left: 122px;
+  width: 50px;
+  height: 32px;
+}
+.tvTowerContainer.carLogosCont .tvTower .mandatoryPitHeader {
+  height: 28px;
+  font-size: 13.5px;
+  line-height: 24px;
+}
+.tvTowerContainer.tireInfoCont {
+  width: 176px;
+}
+.tvTowerContainer.tireInfoCont .tvTower .headerIcon {
+  width: 174px;
+  height: 42px;
+}
+.tvTowerContainer.tireInfoCont .tvTower .standingsSessionInfo {
+  width: 176px;
+  height: 32px;
+}
+.tvTowerContainer.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText {
+  font-size: 18px;
+}
+.tvTowerContainer.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText,
+.tvTowerContainer.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText,
+.tvTowerContainer.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  font-size: 10px;
+}
+.tvTowerContainer.tireInfoCont .tvTower .sessionFlags {
+  left: 122px;
+  width: 50px;
+  height: 32px;
+}
+.tvTowerContainer.tireInfoCont .tvTower .mandatoryPitHeader {
+  height: 28px;
+  font-size: 13.5px;
+  line-height: 24px;
+}
+.tvTowerContainer.carLogosCont.tireInfoCont {
+  width: 197px;
+}
+.tvTowerContainer.carLogosCont.tireInfoCont .tvTower .headerIcon {
+  width: 195px;
+  height: 47px;
+}
+.tvTowerContainer.carLogosCont.tireInfoCont .tvTower .standingsSessionInfo {
+  width: 197px;
+  height: 36px;
+}
+.tvTowerContainer.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText {
+  font-size: 22px;
+}
+.tvTowerContainer.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText,
+.tvTowerContainer.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText,
+.tvTowerContainer.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  font-size: 12px;
+}
+.tvTowerContainer.carLogosCont.tireInfoCont .tvTower .sessionFlags {
+  left: 136px;
+  width: 57px;
+  height: 36px;
+}
+.tvTowerContainer.carLogosCont.tireInfoCont .tvTower .mandatoryPitHeader {
+  height: 32px;
+  font-size: 15.5px;
+  line-height: 25px;
+}
+.tvTowerContainer.carLogosCont.tireInfoCont
+  .tvTower
+  .player
+  .tyreChoiceContainer {
+  padding: 0 3px;
+}
+.tvTowerContainer.showRankCont {
+  width: 235px;
+}
+.tvTowerContainer.showRankCont .tvTower .headerIcon {
+  width: 233px;
+  height: 58px;
+}
+.tvTowerContainer.showRankCont .tvTower .standingsSessionInfo {
+  width: 235px;
+  height: 42px;
+}
+.tvTowerContainer.showRankCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText {
+  font-size: 25px;
+}
+.tvTowerContainer.showRankCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText,
+.tvTowerContainer.showRankCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText,
+.tvTowerContainer.showRankCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  font-size: 12px;
+}
+.tvTowerContainer.showRankCont .tvTower .sessionFlags {
+  left: 162px;
+  height: 42px;
+  width: 67px;
+}
+.tvTowerContainer.showRankCont .tvTower .mandatoryPitHeader {
+  height: 38px;
+  font-size: 18.5px;
+  line-height: 29px;
+}
+.tvTowerContainer.showRankCont.carLogosCont {
+  width: 256px;
+}
+.tvTowerContainer.showRankCont.carLogosCont .tvTower .headerIcon {
+  width: 254px;
+  height: 63px;
+}
+.tvTowerContainer.showRankCont.carLogosCont .tvTower .standingsSessionInfo {
+  width: 256px;
+  height: 42px;
+}
+.tvTowerContainer.showRankCont.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText {
+  font-size: 25px;
+}
+.tvTowerContainer.showRankCont.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText,
+.tvTowerContainer.showRankCont.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText,
+.tvTowerContainer.showRankCont.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  font-size: 12px;
+}
+.tvTowerContainer.showRankCont.carLogosCont .tvTower .sessionFlags {
+  left: 183px;
+  width: 67px;
+  height: 42px;
+}
+.tvTowerContainer.showRankCont.carLogosCont .tvTower .mandatoryPitHeader {
+  height: 38px;
+  font-size: 18.5px;
+  line-height: 29px;
+}
+.tvTowerContainer.showRankCont.tireInfoCont {
+  width: 256px;
+}
+.tvTowerContainer.showRankCont.tireInfoCont .tvTower .headerIcon {
+  width: 254px;
+  height: 63px;
+}
+.tvTowerContainer.showRankCont.tireInfoCont .tvTower .standingsSessionInfo {
+  width: 256px;
+  height: 42px;
+}
+.tvTowerContainer.showRankCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText {
+  font-size: 25px;
+}
+.tvTowerContainer.showRankCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText,
+.tvTowerContainer.showRankCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText,
+.tvTowerContainer.showRankCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  font-size: 12px;
+}
+.tvTowerContainer.showRankCont.tireInfoCont .tvTower .sessionFlags {
+  left: 183px;
+  width: 67px;
+  height: 42px;
+}
+.tvTowerContainer.showRankCont.tireInfoCont .tvTower .mandatoryPitHeader {
+  height: 38px;
+  font-size: 18.5px;
+  line-height: 29px;
+}
+.tvTowerContainer.showRankCont.carLogosCont.tireInfoCont {
+  width: 277px;
+}
+.tvTowerContainer.showRankCont.carLogosCont.tireInfoCont .tvTower .headerIcon {
+  width: 275px;
+  height: 68px;
+}
+.tvTowerContainer.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo {
+  width: 277px;
+  height: 42px;
+}
+.tvTowerContainer.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText {
+  font-size: 25px;
+}
+.tvTowerContainer.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText,
+.tvTowerContainer.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText,
+.tvTowerContainer.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  font-size: 12px;
+}
+.tvTowerContainer.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .sessionFlags {
+  left: 204px;
+  width: 67px;
+  height: 42px;
+}
+.tvTowerContainer.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .mandatoryPitHeader {
+  height: 38px;
+  font-size: 18.5px;
+  line-height: 29px;
+}
+.tvTowerContainer.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .player
+  .tyreChoiceContainer {
+  padding: 0 3px;
+}
+.tvTowerContainer.longNamesCont {
+  width: 238px;
+}
+.tvTowerContainer.longNamesCont .tvTower .headerIcon {
+  width: 236px;
+  height: 57px;
+}
+.tvTowerContainer.longNamesCont .tvTower .standingsSessionInfo {
+  width: 238px;
+  height: 42px;
+}
+.tvTowerContainer.longNamesCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText {
+  font-size: 25px;
+}
+.tvTowerContainer.longNamesCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText,
+.tvTowerContainer.longNamesCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText,
+.tvTowerContainer.longNamesCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  font-size: 12px;
+}
+.tvTowerContainer.longNamesCont .tvTower .sessionFlags {
+  left: 165px;
+  height: 42px;
+  width: 68px;
+}
+.tvTowerContainer.longNamesCont .tvTower .mandatoryPitHeader {
+  height: 38px;
+  font-size: 18.5px;
+  line-height: 29px;
+}
+.tvTowerContainer.longNamesCont .tvTower .player .name {
+  text-align: left;
+  padding: 0 2px;
+  width: 133px;
+}
+.tvTowerContainer.longNamesCont.multiClassCont .tvTower .player .name {
+  text-align: left;
+  padding: 0 12px;
+  width: 133px;
+}
+.tvTowerContainer.longNamesCont.showRankCont {
+  width: 318px;
+}
+.tvTowerContainer.longNamesCont.showRankCont .tvTower .headerIcon {
+  width: 316px;
+  height: 78px;
+}
+.tvTowerContainer.longNamesCont.showRankCont .tvTower .standingsSessionInfo {
+  width: 318px;
+  height: 42px;
+}
+.tvTowerContainer.longNamesCont.showRankCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText {
+  font-size: 25px;
+}
+.tvTowerContainer.longNamesCont.showRankCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText,
+.tvTowerContainer.longNamesCont.showRankCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText,
+.tvTowerContainer.longNamesCont.showRankCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  font-size: 12px;
+}
+.tvTowerContainer.longNamesCont.showRankCont .tvTower .sessionFlags {
+  left: 245px;
+  height: 42px;
+  width: 68px;
+}
+.tvTowerContainer.longNamesCont.showRankCont .tvTower .mandatoryPitHeader {
+  height: 38px;
+  font-size: 18.5px;
+  line-height: 29px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont {
+  width: 339px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont .tvTower .headerIcon {
+  width: 337px;
+  height: 83px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont
+  .tvTower
+  .standingsSessionInfo {
+  width: 339px;
+  height: 42px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText {
+  font-size: 25px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText,
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText,
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  font-size: 12px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont
+  .tvTower
+  .sessionFlags {
+  left: 266px;
+  width: 68px;
+  height: 42px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont
+  .tvTower
+  .mandatoryPitHeader {
+  height: 38px;
+  font-size: 18.5px;
+  line-height: 29px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.tireInfoCont {
+  width: 339px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.tireInfoCont .tvTower .headerIcon {
+  width: 337px;
+  height: 83px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo {
+  width: 339px;
+  height: 42px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText {
+  font-size: 25px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText,
+.tvTowerContainer.longNamesCont.showRankCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText,
+.tvTowerContainer.longNamesCont.showRankCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  font-size: 12px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.tireInfoCont
+  .tvTower
+  .sessionFlags {
+  left: 266px;
+  width: 68px;
+  height: 42px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.tireInfoCont
+  .tvTower
+  .mandatoryPitHeader {
+  height: 38px;
+  font-size: 18.5px;
+  line-height: 29px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont.tireInfoCont {
+  width: 360px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .headerIcon {
+  width: 358px;
+  height: 89px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo {
+  width: 360px;
+  height: 42px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText {
+  font-size: 25px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText,
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText,
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  font-size: 12px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .sessionFlags {
+  left: 287px;
+  width: 68px;
+  height: 42px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .mandatoryPitHeader {
+  height: 38px;
+  font-size: 18.5px;
+  line-height: 29px;
+}
+.tvTowerContainer.longNamesCont.showRankCont.carLogosCont.tireInfoCont
+  .tvTower
+  .player
+  .tyreChoiceContainer {
+  padding: 0 3px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont {
+  width: 259px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont .tvTower .headerIcon {
+  width: 257px;
+  height: 62px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont .tvTower .standingsSessionInfo {
+  width: 259px;
+  height: 42px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText {
+  font-size: 25px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText,
+.tvTowerContainer.longNamesCont.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText,
+.tvTowerContainer.longNamesCont.carLogosCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  font-size: 12px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont .tvTower .sessionFlags {
+  left: 186px;
+  width: 68px;
+  height: 42px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont .tvTower .mandatoryPitHeader {
+  height: 42px;
+  font-size: 20px;
+  line-height: 36px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont .tvTower .player .name {
+  width: 133px;
+}
+.tvTowerContainer.longNamesCont.tireInfoCont {
+  width: 259px;
+}
+.tvTowerContainer.longNamesCont.tireInfoCont .tvTower .headerIcon {
+  width: 257px;
+  height: 62px;
+}
+.tvTowerContainer.longNamesCont.tireInfoCont .tvTower .standingsSessionInfo {
+  width: 259px;
+  height: 42px;
+}
+.tvTowerContainer.longNamesCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText {
+  font-size: 25px;
+}
+.tvTowerContainer.longNamesCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText,
+.tvTowerContainer.longNamesCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText,
+.tvTowerContainer.longNamesCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  font-size: 12px;
+}
+.tvTowerContainer.longNamesCont.tireInfoCont .tvTower .sessionFlags {
+  left: 186px;
+  width: 68px;
+  height: 42px;
+}
+.tvTowerContainer.longNamesCont.tireInfoCont .tvTower .mandatoryPitHeader {
+  height: 42px;
+  font-size: 20px;
+  line-height: 36px;
+}
+.tvTowerContainer.longNamesCont.tireInfoCont .tvTower .player .name {
+  width: 133px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont.tireInfoCont {
+  width: 280px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont.tireInfoCont .tvTower .headerIcon {
+  width: 278px;
+  height: 68px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo {
+  width: 280px;
+  height: 42px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText {
+  font-size: 25px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainHoursText,
+.tvTowerContainer.longNamesCont.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainMinutesText,
+.tvTowerContainer.longNamesCont.carLogosCont.tireInfoCont
+  .tvTower
+  .standingsSessionInfo
+  .standingsSessionInfoText
+  .sessionRemainSecondsText {
+  font-size: 12px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont.tireInfoCont
+  .tvTower
+  .sessionFlags {
+  left: 207px;
+  width: 68px;
+  height: 42px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont.tireInfoCont
+  .tvTower
+  .mandatoryPitHeader {
+  height: 45px;
+  font-size: 22px;
+  line-height: 38px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont.tireInfoCont
+  .tvTower
+  .player
+  .name {
+  width: 133px;
+}
+.tvTowerContainer.longNamesCont.carLogosCont.tireInfoCont
+  .tvTower
+  .player
+  .tyreChoiceContainer {
+  padding: 0 3px;
+}
+.podiumSeparator {
+  display: block;
+  position: absolute;
+  height: 2px;
+  left: 0;
+  background: hsla(0, 0%, 100%, 0.7);
+  color: hsla(0, 0%, 100%, 0);
+  width: 100%;
+  padding: 0 2px;
+  font-size: 1px;
+  text-align: center;
+  z-index: 5;
+}
+.info {
+  position: absolute;
+  left: 20px;
+  top: 405px;
+  font-family: EurasiaEx;
+  white-space: pre;
+}
+.info .warning {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 3px 5px 3px 16px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  position: relative;
+}
+.info .warning .svgIcon {
+  vertical-align: top;
+}
+.info .warning .svgIcon svg {
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  height: 17px;
+  width: 17px;
+  fill: orange;
+  margin-right: 0;
+  padding: 0;
+}
+.pitstop:empty {
+  content: "";
+}
+.pitInfoFixed {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  transform: translate(-50%);
+  border-radius: 10px;
+}
+.pitInfo {
+  position: absolute;
+  width: 265px;
+  background: transparent;
+  right: 0.5%;
+  overflow: hidden;
+  white-space: pre;
+  top: 13%;
+  text-align: center;
+}
+.pitInfo .inner {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  border-radius: 10px;
+}
+.pitInfo .title {
+  font-size: 40px;
+  padding: 0 0 5px;
+}
+.pitInfo .left {
+  font-size: 28px;
+  opacity: 0.75;
+}
+.pitInfoFixed {
+  position: absolute;
+  top: 310px;
+  left: 50%;
+  background: transparent;
+  text-align: center;
+}
+.pitInfoFixed .inner {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  transform: translate(-50%);
+  border-radius: 10px;
+}
+.pitInfoFixed .tasks {
+  display: flex;
+  height: 70px;
+}
+.pitInfoFixed .tasks .task {
+  flex: auto;
+  margin: 10px;
+  border: 2px solid #fff;
+  padding: 10px 0;
+  border-radius: 10px;
+  vertical-align: center;
+  overflow: hidden;
+  white-space: pre;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.pitInfoFixed .title {
+  font-size: 20px;
+  padding: 0 0 5px;
+}
+.pitInfoFixed .left {
+  opacity: 0.5;
+}
+.pitInfoFixed .barContainer {
+  background: #00f;
+  display: inline-block;
+  width: 700px;
+  background: hsla(0, 0%, 100%, 0.2);
+  border-radius: 5px;
+  margin: 0 10px 10px;
+}
+.pitInfoFixed .barContainer .bar {
+  height: 4px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+.pitInfoFixed .totalTime {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 50%;
+  font-size: 30px;
+  transform: translate(-50%, 10px);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.pitMinInfoFixed {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  background: transparent;
+  text-align: center;
+}
+.pitMinInfoFixed,
+.pitMinInfoFixed .inner {
+  padding: 10px;
+  transform: translate(-50%);
+  border-radius: 10px;
+}
+.pitMinInfoFixed .inner {
+  background: rgba(0, 0, 0, 0.5);
+}
+.pitMinInfoFixed .pitMinBarContainer {
+  background: #00f;
+  display: inline-block;
+  width: 700px;
+  background: hsla(0, 0%, 100%, 0.8);
+  border-radius: 5px;
+  margin: 150px 10px 10px;
+}
+.pitMinInfoFixed .pitMinBarContainer .minBar {
+  height: 40px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+.pitMinInfoFixed .minPitTime {
+  position: absolute;
+  top: 155px;
+  left: 50%;
+  width: 100%;
+  font-size: 30px;
+  transform: translate(-50%, 10px);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.8);
+}
+.pitMenuInfoBox {
+  position: absolute;
+  width: 25.3%;
+  height: 33%;
+  right: 0.5%;
+  top: 30.5%;
+  border: 1px solid #fff;
+  background: hsla(0, 0%, 100%, 0.75);
+}
+.pitMenuInfoBox .pitMenuInfoText {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  white-space: wrap;
+  font-family: Segoe UI;
+  font-weight: 700;
+  color: #000;
+  font-style: normal;
+  font-size: 64px;
+  text-align: center;
+  align-items: center;
+  vertical-align: center;
+  margin: 20% 0 0;
+}
+@keyframes blinkero {
+  50% {
+    border: 2px solid green;
+    color: green;
+  }
+  0% {
+    border: 2px solid #fff;
+    color: #fff;
+  }
+}
+.startingLights .inner {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  background: #1d1d1d;
+  border-radius: 50px;
+  padding: 10px;
+  transform: translate(-50%);
+  box-shadow: 0 0 20px #000;
+  border: 2px solid #222;
+  background: linear-gradient(0, #141414, #323232);
+}
+.startingLights .inner .light {
+  width: 94px;
+  height: 90px;
+  float: left;
+  box-shadow: 0 0 20px #000;
+  border-radius: 100%;
+  background: url(files/countdownLight.27badc0f9727f60a057553e26793c766.png),
+    linear-gradient(0, #1e1e1e, #0a0a0a);
+  border: 1px solid #333;
+  margin: 0 5px;
+  position: relative;
+}
+.startingLights .inner .light:after {
+  background: url(files/countdownLightActive.342546b7864612f84ba12297418f9881.png);
+}
+.startingLights .inner .light:after,
+.startingLights .inner .light:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: "";
+  width: 94px;
+  height: 90px;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.startingLights .inner .light:before {
+  background: url(files/countdownLightGreen.cdf0617bf66c1053930741481676a4b5.png);
+  z-index: 11;
+}
+.startingLights .inner .light.active:after,
+.startingLights .inner .light.green:before {
+  opacity: 1;
+}
+.pitLimiter {
+  display: none;
+  position: absolute;
+  top: 200px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 10px;
+}
+.pitLimiter * {
+  margin: 0;
+}
+.pitLimiter.shouldShow {
+  display: block;
+}
+.pitLimiter .max {
+  font-size: 20px;
+  padding: 0 5px 5px;
+}
+.pitLimiter .current {
+  opacity: 0.75;
+}
+.pitLimiter.warning {
+  background: rgba(119, 0, 0, 0.75);
+}
+.flags {
+  position: absolute;
+  top: 150px;
+  left: 20px;
+}
+.flags .flag {
+  margin-bottom: 10px;
+}
+.flags .flag .text {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-size: 13px;
+  padding: 5px 10px;
+  text-align: center;
+  width: 130px;
+  overflow: hidden;
+  white-space: wrap;
+}
+.flags .flag .flagBlock {
+  width: 130px;
+  height: 50px;
+  position: relative;
+}
+.flags .flag .flagBlock:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url(files/flag.b6493a90dfd64606df98d8436d7a5765.png);
+}
+.flags .flag.white .flagBlock {
+  background: #fff;
+}
+.flags .flag.blue .flagBlock {
+  background: #4949d4;
+}
+.flags .flag.yellow .flagBlock {
+  background: #fcf831;
+}
+.flags .flag.black .flagBlock {
+  background: #000;
+}
+.flags .flag.checkered .flagBlock {
+  background-image: linear-gradient(
+      90deg,
+      hsla(0, 0%, 100%, 0),
+      hsla(0, 0%, 100%, 0)
+    ),
+    linear-gradient(90deg, #000 50%, #fff 0),
+    linear-gradient(180deg, #000 50%, #fff 0);
+  background-blend-mode: normal, difference, normal;
+  background-size: 34px 33px;
+}
+.flags .flag.blackAndWhite .flagBlock {
+  background: #fff;
+  position: relative;
+}
+.flags .flag.blackAndWhite .flagBlock:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: #000 transparent transparent;
+  border-style: solid;
+  border-width: 50px 130px 0 0;
+}
+.flags .flag.green .flagBlock {
+  background: #29c25c;
+}
+.graphs {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  min-width: 312px;
+  max-width: 624px;
+  max-height: 95%;
+  cursor: pointer;
+}
+.graphs.wide {
+  max-width: 932px;
+}
+.graphs.wider {
+  max-width: 1238px;
+}
+.graphs.widest {
+  max-width: 1545px;
+}
+.graphs:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.graphs canvas {
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  margin: 0 2.5px;
+}
+.graphs .selection {
+  position: fixed;
+  right: 15px;
+  top: 60px;
+  width: 300px;
+  height: 1000px;
+  bottom: 0;
+  background: #000;
+  color: #fff;
+  border: 1px solid #333;
+  font-family: Oswald;
+}
+.graphs .selection option {
+  padding: 2.5px 10px;
+  white-space: pre-line;
+}
+.graphs .selection option.depth-1 {
+  padding-left: 30px;
+  color: hsla(0, 0%, 100%, 0.6);
+  position: relative;
+}
+.graphs .selection option.depth-1:before {
+  content: "↳";
+  display: inline;
+  position: relative;
+  left: -10px;
+  font-family: arial;
+}
+.graphs .selection option:nth-child(odd) {
+  background: hsla(0, 0%, 100%, 0.1);
+}
+.graphs .selection:focus {
+  outline: none;
+}
+.graphs .selection::-webkit-scrollbar {
+  width: 10px;
+  background-color: #1b1b1b;
+  border-left: 0.1vh solid hsla(0, 0%, 100%, 0.1);
+}
+.graphs .selection::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: #fff;
+}
+.graphs.hasTracking .canvases {
+  padding: 5px;
+}
+.graphs.hasTracking .clearTracking,
+.graphs.hasTracking .reset,
+.graphs.hasTracking .toggleEdit {
+  display: none;
+}
+.graphs.hasTracking:hover .clearTracking,
+.graphs.hasTracking:hover .reset,
+.graphs.hasTracking:hover .toggleEdit {
+  display: block;
+}
+.graphs .clearSelection,
+.graphs .clearTracking,
+.graphs .closeSelection,
+.graphs .reset,
+.graphs .toggleEdit {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  border-radius: 0 5px 0 0;
+}
+.graphs .clearSelection:hover,
+.graphs .clearTracking:hover,
+.graphs .closeSelection:hover,
+.graphs .reset:hover,
+.graphs .toggleEdit:hover {
+  color: #ffa;
+}
+.graphs .reset {
+  right: 0;
+  left: auto;
+}
+.graphs .clearTracking {
+  right: 0;
+  left: auto;
+  top: 0;
+  bottom: auto;
+}
+.graphs .closeSelection {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.graphs .clearSelection,
+.graphs .closeSelection {
+  position: fixed;
+  bottom: auto;
+  left: auto;
+  right: 315px;
+  font-size: 50px;
+  border-radius: 5px 0 0 5px;
+  padding: 5px 10px 10px;
+  cursor: pointer;
+}
+.graphs .clearSelection {
+  top: 60px;
+}
