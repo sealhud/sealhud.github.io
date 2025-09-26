@@ -7,4 +7,4 @@ It does **not** contain the actual project files.
 [dsjunges83/dsjunges83.github.io](https://github.com/dsjunges83/dsjunges83.github.io)
 
 Your Raceroom startup parameter should be:  
--webHudUrl=https://dsjunges83.github.io/
+-webHudUrl=https://sealhud.github.io/
