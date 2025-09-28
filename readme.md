@@ -15,4 +15,4 @@ More information can be found here:
 https://forum.kw-studios.com/index.php?threads/new-repository-and-fix-for-otterhud.20675/
 
 Cheers. =D
-Diego Junges
+SealHud Team
