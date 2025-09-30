@@ -1,3 +1,10 @@
+		0.2
+		----------		
+		GENERAL
+		- Brakebias for hypercars were being displayed during automatic changes. Now it's for manual changes only.
+		- For new hypercars, Motec was displaying all automatic changes in brake bias. Now it's manual changes only, as well.
+		- Multiplayer ranking button removed, since this feature was no longer working.
+		
 		0.1
 		----------
 		SealHud Fork Release
