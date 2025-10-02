@@ -1,3 +1,9 @@
+		0.3
+		----------		
+		GENERAL
+		- New PNG images for starting lights, more modern-looking, for a change.
+		- Fix for retrieving driver rating and reputation from Raceroom (used by SoF and TV Tower)
+		
 		0.2
 		----------		
 		GENERAL
