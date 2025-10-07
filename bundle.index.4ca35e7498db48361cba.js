@@ -9475,6 +9475,19 @@
             },
           },
         },
+		10393: {
+          Name: "Donington Park",
+          Layouts: {
+            10394: {
+              Name: "Grand Prix",
+              BoxEntrance: 3864,
+            },
+            10725: {
+              Name: "National",
+              BoxEntrance: 3062,
+            },
+          },
+        },
 		10462: {
           Name: "Interlagos",
           Layouts: {
@@ -11499,11 +11512,41 @@
                         if (500 <= t && t <= 620) return "Turn 2";
                         if (621 <= t && t <= 790) return "Turn 3";
                         if (1030 <= t && t <= 1150) return "Turn 4";
-						if (1300 <= t || t <= 1450) return "Turn 5";
+						if (1300 <= t && t <= 1450) return "Turn 5";
                         if (1830 <= t && t <= 1950) return "Chicane";
                         if (2050 <= t && t <= 2150) return "Turn 6";
                         if (2200 <= t && t <= 2320) return "Hairpin";
+                      }					  
+					  else if (10394 === e) {
+                        if (3806 <= t || t <= 0) return "Start-Finish";
+                        if (0 <= t && t <= 190) return "Wheatcroft Straight";
+                        if (191 <= t && t <= 438) return "Redgate";
+                        if (600 <= t && t <= 807) return "Hollywood";
+                        if (820 <= t && t <= 950) return "Craner Curves";
+						if (1050 <= t && t <= 1170) return "Old Hairpin";						
+                        if (1250 <= t && t <= 1400) return "Starkeys Bridge";
+                        if (1530 <= t && t <= 1630) return "Schwantz Curve";
+                        if (1680 <= t && t <= 1820) return "McLeans";
+						if (1980 <= t && t <= 2300) return "Coppice";
+                        if (2310 <= t && t <= 2700) return "Dunlop Straight";
+						if (2750 <= t && t <= 2940) return "Fogarty's Esses";
+                        if (3260 <= t && t <= 3400) return "Melbourne Hairpin";
+                        if (3650 <= t && t <= 3750) return "Goddards";
                       }
+					  else if (10725 === e) {
+                        if (3005 <= t || t <= 0) return "Start-Finish";
+                        if (0 <= t && t <= 190) return "Wheatcroft Straight";
+                        if (191 <= t && t <= 495) return "Redgate";
+                        if (496 <= t && t <= 807) return "Hollywood";
+                        if (808 <= t && t <= 1009) return "Craner Curves";
+						if (1010 <= t && t <= 1226) return "Old Hairpin";						
+                        if (1227 <= t && t <= 1450) return "Starkeys Bridge";
+                        if (1451 <= t && t <= 1642) return "Schwantz Curve";
+                        if (1643 <= t && t <= 1867) return "McLeans";
+						if (1973 <= t && t <= 2300) return "Coppice";
+                        if (2301 <= t && t <= 2709) return "Dunlop Straight";
+						if (2710 <= t && t <= 2926) return "Fogarty's Esses";
+                      }					  
 					  else if (10463 === e) {
                         if (4000 <= t || t <= 150) return "Start-Finish";
                         if (250 <= t && t <= 500) return "Senna S";
@@ -94699,43 +94742,117 @@
 		{X: -86.0125, Y: 4.212397, Z: -434.0024,},		
 		{X: -65.78572, Y: 4.107386, Z: -434.0253,},		
         ],
+		10394: [
+		{X: 18.62747, Y: 0.4398357, Z: -13.90767,},
+		{X: 26.75981, Y: 0.5883489, Z: -15.15851,},
+		{X: 35.83693, Y: 0.7523322, Z: -16.85818,},
+		{X: 44.77673, Y: 0.897311, Z: -18.59606,},
+		{X: 53.9039, Y: 1.079644, Z: -20.3557,},
+		{X: 62.59137, Y: 1.239997, Z: -22.04963,},
+		{X: 71.50602, Y: 1.436183, Z: -23.78385,},
+		{X: 80.48395, Y: 1.609313, Z: -25.5574,},
+		{X: 89.37907, Y: 1.775697, Z: -27.2442,},
+		{X: 98.28764, Y: 1.957622, Z: -29.03117,},
+		{X: 107.224, Y: 2.146733, Z: -30.61447,},
+		{X: 116.1207, Y: 2.316493, Z: -32.43042,},
+		{X: 18.62747, Y: 0.4398357, Z: -13.90767,},
+		{X: 26.75981, Y: 0.5883489, Z: -15.15851,},
+		{X: 35.83693, Y: 0.7523322, Z: -16.85818,},
+		{X: 44.77673, Y: 0.897311, Z: -18.59606,},
+		{X: 53.9039, Y: 1.079644, Z: -20.3557,},
+		{X: 62.59137, Y: 1.239997, Z: -22.04963,},
+		{X: 71.50602, Y: 1.436183, Z: -23.78385,},
+		{X: 80.48395, Y: 1.609313, Z: -25.5574,},
+		{X: 89.37907, Y: 1.775697, Z: -27.2442,},
+		{X: 98.28764, Y: 1.957622, Z: -29.03117,},
+		{X: 107.224, Y: 2.146733, Z: -30.61447,},
+		{X: 116.1207, Y: 2.316493, Z: -32.43042,},
+		{X: 18.62747, Y: 0.4398357, Z: -13.90767,},
+		{X: 26.75981, Y: 0.5883489, Z: -15.15851,},
+		{X: 35.83693, Y: 0.7523322, Z: -16.85818,},
+		{X: 44.77673, Y: 0.897311, Z: -18.59606,},
+		{X: 53.9039, Y: 1.079644, Z: -20.3557,},
+		{X: 62.59137, Y: 1.239997, Z: -22.04963,},
+		{X: 71.50602, Y: 1.436183, Z: -23.78385,},
+		{X: 80.48395, Y: 1.609313, Z: -25.5574,},
+		{X: 89.37907, Y: 1.775697, Z: -27.2442,},
+		{X: 98.28764, Y: 1.957622, Z: -29.03117,},
+		{X: 107.224, Y: 2.146733, Z: -30.61447,},
+        ],
+		10725: [
+		{X: 18.18524, Y: 0.4079036, Z: -13.6333,},
+		{X: 26.76047, Y: 0.588551, Z: -15.16933,},
+		{X: 35.87172, Y: 0.752875, Z: -16.86785,},
+		{X: 44.77016, Y: 0.8971145, Z: -18.57268,},
+		{X: 53.65951, Y: 1.018853, Z: -20.33364,},
+		{X: 62.66906, Y: 1.241319, Z: -22.07608,},
+		{X: 71.52221, Y: 1.436081, Z: -23.76672,},
+		{X: 80.75087, Y: 1.626541, Z: -25.59719,},
+		{X: 89.36817, Y: 1.761976, Z: -27.26138,},
+		{X: 98.30294, Y: 1.954063, Z: -29.04673,},
+		{X: 107.3398, Y: 2.155482, Z: -30.64706,},
+		{X: 116.1126, Y: 2.323765, Z: -32.46672,},
+		{X: 18.18524, Y: 0.4079036, Z: -13.6333,},
+		{X: 26.76047, Y: 0.588551, Z: -15.16933,},
+		{X: 35.87172, Y: 0.752875, Z: -16.86785,},
+		{X: 44.77016, Y: 0.8971145, Z: -18.57268,},
+		{X: 53.65951, Y: 1.018853, Z: -20.33364,},
+		{X: 62.66906, Y: 1.241319, Z: -22.07608,},
+		{X: 71.52221, Y: 1.436081, Z: -23.76672,},
+		{X: 80.75087, Y: 1.626541, Z: -25.59719,},
+		{X: 89.36817, Y: 1.761976, Z: -27.26138,},
+		{X: 98.30294, Y: 1.954063, Z: -29.04673,},
+		{X: 107.3398, Y: 2.155482, Z: -30.64706,},
+		{X: 116.1126, Y: 2.323765, Z: -32.46672,},
+		{X: 18.18524, Y: 0.4079036, Z: -13.6333,},
+		{X: 26.76047, Y: 0.588551, Z: -15.16933,},
+		{X: 35.87172, Y: 0.752875, Z: -16.86785,},
+		{X: 44.77016, Y: 0.8971145, Z: -18.57268,},
+		{X: 53.65951, Y: 1.018853, Z: -20.33364,},
+		{X: 62.66906, Y: 1.241319, Z: -22.07608,},
+		{X: 71.52221, Y: 1.436081, Z: -23.76672,},
+		{X: 80.75087, Y: 1.626541, Z: -25.59719,},
+		{X: 89.36817, Y: 1.761976, Z: -27.26138,},
+		{X: 98.30294, Y: 1.954063, Z: -29.04673,},
+		{X: 107.3398, Y: 2.155482, Z: -30.64706,},
+        ],
 		10463: [
-		{X: -336.37, Y: 15.72, Z: -426.012,},
-        {X: -339.71, Y: 15.71, Z: -413.25,},
-        {X: -342.61, Y: 15.70, Z: -401.61,},
-        {X: -345.58, Y: 15.71, Z: -389.95,},
-        {X: -348.46, Y: 15.72, Z: -378.23,},
-        {X: -351.42, Y: 15.73, Z: -366.58,},
-        {X: -354.28, Y: 15.74, Z: -355.01,},
-        {X: -357.25, Y: 15.75, Z: -343.17,},
-        {X: -360.21, Y: 15.75, Z: -331.54,},
-        {X: -363.14, Y: 15.75, Z: -320.019,},
-        {X: -366.044, Y: 15.75, Z: -308.25,},
-        {X: -368.98, Y: 15.75, Z: -296.57,},
-        {X: -371.92, Y: 15.75, Z: -284.94,},
-        {X: -374.82, Y: 15.76, Z: -273.26,},
-        {X: -377.75, Y: 15.76, Z: -261.62,},
-        {X: -380.64, Y: 15.74, Z: -250.098,},
-        {X: -383.66, Y: 15.71, Z: -238.22,},
-        {X: -386.64, Y: 15.68, Z: -226.57,},
-        {X: -389.62, Y: 15.65, Z: -214.90,},
-        {X: -392.57, Y: 15.62, Z: -203.30,},
-        {X: -395.62, Y: 15.58, Z: -191.55,},
-        {X: -398.50, Y: 15.56, Z: -180.18,},
-		{X: -336.37, Y: 15.72, Z: -426.012,},
-        {X: -339.71, Y: 15.71, Z: -413.25,},
-        {X: -342.61, Y: 15.70, Z: -401.61,},
-        {X: -345.58, Y: 15.71, Z: -389.95,},
-        {X: -348.46, Y: 15.72, Z: -378.23,},
-        {X: -351.42, Y: 15.73, Z: -366.58,},
-        {X: -354.28, Y: 15.74, Z: -355.01,},
-        {X: -357.25, Y: 15.75, Z: -343.17,},
-        {X: -360.21, Y: 15.75, Z: -331.54,},
-        {X: -363.14, Y: 15.75, Z: -320.019,},
-        {X: -366.044, Y: 15.75, Z: -308.25,},
-        {X: -368.98, Y: 15.75, Z: -296.57,},
-        {X: -371.92, Y: 15.75, Z: -284.94,},
-        {X: -374.82, Y: 15.76, Z: -273.26,},
+		{X: -337.3617, Y: 15.82997, Z: -423.3378,},			
+		{X: -339.9062, Y: 15.79607, Z: -413.0908,},			
+		{X: -342.9642, Y: 15.81195, Z: -400.9825,},			
+		{X: -345.7534, Y: 15.79995, Z: -389.7161,},			
+		{X: -348.7082, Y: 15.81479, Z: -377.8701,},			
+		{X: -351.6458, Y: 15.82688, Z: -366.1817,},			
+		{X: -354.6219, Y: 15.82636, Z: -354.4312,},			
+		{X: -357.5832, Y: 15.81884, Z: -342.603,},			
+		{X: -360.4315, Y: 15.84102, Z: -331.2083,},			
+		{X: -363.2836, Y: 15.83927, Z: -319.7332,},			
+		{X: -366.2516, Y: 15.8374, Z: -307.8364,},			
+		{X: -369.1311, Y: 15.83886, Z: -296.3674,},			
+		{X: -372.1446, Y: 15.84267, Z: -284.5118,},			
+		{X: -375.0872, Y: 15.85583, Z: -272.7732,},			
+		{X: -378.0292, Y: 15.84486, Z: -261.0551,},			
+		{X: -380.9326, Y: 15.8249, Z: -249.5508,},			
+		{X: -383.9246, Y: 15.79251, Z: -237.6968,},			
+		{X: -386.851, Y: 15.77211, Z: -226.1255,},			
+		{X: -389.832, Y: 15.67229, Z: -214.414,},			
+		{X: -392.8098, Y: 15.70761, Z: -202.877,},			
+		{X: -395.7875, Y: 15.67513, Z: -191.2585,},			
+		{X: -398.9017, Y: 15.65357, Z: -179.5085,},
+		{X: -337.3617, Y: 15.82997, Z: -423.3378,},			
+		{X: -339.9062, Y: 15.79607, Z: -413.0908,},			
+		{X: -342.9642, Y: 15.81195, Z: -400.9825,},			
+		{X: -345.7534, Y: 15.79995, Z: -389.7161,},			
+		{X: -348.7082, Y: 15.81479, Z: -377.8701,},			
+		{X: -351.6458, Y: 15.82688, Z: -366.1817,},			
+		{X: -354.6219, Y: 15.82636, Z: -354.4312,},			
+		{X: -357.5832, Y: 15.81884, Z: -342.603,},			
+		{X: -360.4315, Y: 15.84102, Z: -331.2083,},			
+		{X: -363.2836, Y: 15.83927, Z: -319.7332,},			
+		{X: -366.2516, Y: 15.8374, Z: -307.8364,},			
+		{X: -369.1311, Y: 15.83886, Z: -296.3674,},			
+		{X: -372.1446, Y: 15.84267, Z: -284.5118,},			
+		{X: -375.0872, Y: 15.85583, Z: -272.7732,},
         ],
       };
     var zi,
@@ -102629,7 +102746,7 @@
       Is = !1,
       _s = window.clientInformation.appVersion.toString().match(/64.0/),
       // ---- VERSION (HUD CURRENT VERSION) ----
-      Ms = 0.3,
+      Ms = 0.4,
       js = (function(t) {
         function e(e) {
           var u = t.call(this, e) || this;
@@ -104456,17 +104573,17 @@
                       Object(In.d)(u.updateFunction))));
             }),
             (u.getPositionRelative = function(e, t) {
-              if (!u.appRef.current)
-                return {
-                  x: 0,
-                  y: 0,
-                };
-              var n = u.appRef.current.getBoundingClientRect();
-              return {
-                x: (e - n.left * u.appZoom) / u.appZoom,
-                y: (t - n.top * u.appZoom) / u.appZoom,
-              };
-            }),
+			  if (!u.appRef.current)
+				return {
+				  x: 0,
+				  y: 0,
+				};
+			  var n = u.appRef.current.getBoundingClientRect();
+			  return {
+				x: (e - n.left) / u.appZoom,
+				y: (t - n.top) / u.appZoom,
+			  };
+			}),
             (u.onMouseDown = function(e) {
               var t = u.getWidgetId(e);
               if (t && (!u.lockHud || 2 === e.button))
@@ -104476,9 +104593,9 @@
                     var n = e.currentTarget.getBoundingClientRect(),
                       r = u.getPositionRelative(e.clientX, e.clientY),
                       a = u.getPositionRelative(
-                        n.left * u.appZoom,
-                        n.top * u.appZoom,
-                      );
+					  n.left,
+					  n.top,
+					);
                     u.currentCursorWidgetOffset = {
                       id: t,
                       x: a.x - r.x,
@@ -104498,9 +104615,9 @@
                   var n = e.currentTarget.getBoundingClientRect(),
                     r = u.getPositionRelative(e.clientX, e.clientY),
                     a = u.getPositionRelative(
-                      n.left * (u.appZoom / 2),
-                      n.top * (u.appZoom / 2),
-                    );
+					  n.left,
+					  n.top,
+					);
                   u.currentCursorWidgetOffset = {
                     id: t,
                     x: a.x - r.x,
@@ -105772,9 +105889,9 @@
                       ft.a.createElement(
                         "li",
                         null,
-                        "New images for starting lights.",
+                        "Fix for widgets disappearing when trying to move them.",
                         ft.a.createElement("br", null),
-                        "PNG files for starting lights now are a bit more modern-looking.",
+                        "Widgets were moving away from the mouse cursor when dragging them in resolutions other than 1080p. The HUD now supports all resolutions.",
                         ft.a.createElement("br", null),
                       ),
                     ),
@@ -105785,9 +105902,35 @@
                       ft.a.createElement(
                         "li",
                         null,
-                        "Fix for multiplayer data.",
+                        "Added - Track Data for AVUS circuit",
                         ft.a.createElement("br", null),
-                        "HUD was failing to retrieve data from Raceroom. This is used by Strength of Field info and by TV Tower as well.",
+                        "This includes all track details (Name, LayoutName, Length, Corner Names) and all pit-spot positions.",
+                        ft.a.createElement("br", null),
+                      ),
+                    ),
+					
+					ft.a.createElement(
+                      "ul",
+                      null,
+                      ft.a.createElement(
+                        "li",
+                        null,
+                        "Added - Track Data for Alemanring circuit",
+                        ft.a.createElement("br", null),
+                        "This includes all track details (Name, LayoutName, Length, Corner Names) and all pit-spot positions.",
+                        ft.a.createElement("br", null),
+                      ),
+                    ),
+					
+					ft.a.createElement(
+                      "ul",
+                      null,
+                      ft.a.createElement(
+                        "li",
+                        null,
+                        "Added - Track Data for Donington Park",
+                        ft.a.createElement("br", null),
+                        "This includes all track details (Name, LayoutName, Length, Corner Names) and all pit-spot positions.",
                         ft.a.createElement("br", null),
                       ),
                     ),
@@ -105960,9 +106103,11 @@
                     ),
                     ft.a.createElement("br", null),
                     ft.a.createElement("br", null),
-                    "If you encounter any sort of problems, have questions or a suggestion, feel free to post in the Forum-Thread!.",
+                    "If you encounter any sort of problems, have questions or a suggestion, feel free to post in the Forum-Thread!",
                     ft.a.createElement("br", null),
                     "HUGE THANKS to everyone on the forum who has been reporting bugs and helping improve this HUD.",
+                    ft.a.createElement("br", null),
+                    "A very special thanks to Pedro Santana for collecting all track data, and also for supporting this project.",
                     ft.a.createElement("br", null),
                     ft.a.createElement("br", null),
                     "SealHud is free to use and it's based on OtterHud.",
@@ -105970,7 +106115,7 @@
                     "We didn't create this HUD, we're just trying to maintain it. Consider donating to the creator's Coffee Fund.",
                     ft.a.createElement("br", null),
                     ft.a.createElement("br", null),
-                    "As said by Otter: Moo!",
+                    "As once said by Otter: Moo!",
                     ft.a.createElement("br", null),
                     "SealHUD Team",
                   ),
