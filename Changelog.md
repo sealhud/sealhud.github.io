@@ -1,3 +1,9 @@
+		0.4
+		----------		
+		GENERAL
+		- Widgets were moving away from the mouse cursor when dragging them in resolutions other than 1080p. The HUD now supports all resolutions.
+		- Added - Track data (Name, Layouts, Length, Corner Names, Pit entrance and Pit Spots) for: AVUS, Alemanring and Donington Park.
+		
 		0.3
 		----------		
 		GENERAL
