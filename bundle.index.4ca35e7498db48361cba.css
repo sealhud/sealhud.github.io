@@ -339,7 +339,7 @@ html.debug .viewport {
   text-align: center;
   height: 14px;
   line-height: 14px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .settings .performance {
   display: block;
@@ -347,7 +347,7 @@ html.debug .viewport {
   width: 125px;
   height: 24px;
   margin: 0 200px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .settings .otterhud_logo {
   display: block;
@@ -1097,7 +1097,7 @@ html.debug .viewport {
   overflow: hidden;
   position: absolute;
   font-weight: 350;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .fuelDetail.low {
   background: rgba(255, 0, 0, 0.7);
@@ -1772,7 +1772,7 @@ html.debug .viewport {
   background: transparent;
   overflow: hidden;
   position: absolute;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .fuelCalc.low {
   background: rgba(255, 0, 0, 0.7);
@@ -2371,7 +2371,7 @@ html.debug .viewport {
   left: 0;
   width: 100%;
   display: none;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .positionBarContainer.normal.shouldShow {
   display: block;
@@ -2477,7 +2477,7 @@ html.debug .viewport {
   margin-top: 23px;
   z-index: -1;
   height: 21px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .positionBarContainer.normal .positionBar .player .pitting.noShadow {
   text-shadow: 2px 2px 2px transparent, 0 0 10px transparent;
@@ -2494,7 +2494,7 @@ html.debug .viewport {
   left: 2px;
   z-index: -2;
   height: 21px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .positionBarContainer.normal .positionBar .player .pitting .pittime.noShadow {
   text-shadow: 2px 2px 2px transparent, 0 0 10px transparent;
@@ -2511,7 +2511,7 @@ html.debug .viewport {
   top: 0;
   z-index: -2;
   height: 21px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .positionBarContainer.normal .positionBar .player .pitting .pittimea.noShadow {
   text-shadow: 2px 2px 2px transparent, 0 0 10px transparent;
@@ -2655,7 +2655,7 @@ html.debug .viewport {
   padding: 4px;
   position: relative;
   white-space: nowrap;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .positionBarContainer.relative .player:nth-child(odd) {
   background: rgba(0, 0, 0, 0.2);
@@ -2719,7 +2719,7 @@ html.debug .viewport {
   display: inline-block;
 }
 .positionBarContainer.relative .player .stopStatus.textShadow {
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .positionBarContainer.relative .player.lapping {
   color: #5997b0;
@@ -2767,7 +2767,7 @@ html.debug .viewport {
   position: absolute;
   background: hsla(0, 0%, 58.8%, 0.8);
   color: #fff;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
   left: -76px;
   width: 75px;
   text-align: center;
@@ -2885,7 +2885,7 @@ html.debug .viewport {
 .motec .engineMap {
   left: 18px;
 }
-.motec .engineBrakeBox {
+.motec .absBox {
   position: absolute;
   font-size: 10px;
   width: 42px;
@@ -2897,18 +2897,18 @@ html.debug .viewport {
   left: 0;
   opacity: 1;
 }
-.motec .engineBrakeLabel {
+.motec .absLabel {
   left: 2px;
 }
-.motec .engineBrake,
-.motec .engineBrakeLabel {
+.motec .abs,
+.motec .absLabel {
   position: absolute;
   font-size: 11px;
   top: 0;
   opacity: 1;
 }
-.motec .engineBrake {
-  left: 18px;
+.motec .abs {
+  left: 23px;
 }
 .motec .tractionLevelBox {
   position: absolute;
@@ -2961,7 +2961,7 @@ html.debug .viewport {
 .motec .brakeBias {
   left: 18px;
 }
-.motec.showEM .engineBrakeBox,
+.motec.showEM .absBox,
 .motec.showTC .brakeBiasBox {
   top: 12px;
 }
@@ -2999,7 +2999,7 @@ html.debug .viewport {
   font-size: 30px;
   padding: 5px 10px;
   color: #fff;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .progress .estimate .qualifyInfo {
   position: absolute;
@@ -3048,7 +3048,7 @@ html.debug .viewport {
   font-size: 30px;
   padding: 5px 10px;
   color: #fff;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .progress .lastLapContainer .laps {
   position: absolute;
@@ -3160,7 +3160,7 @@ html.debug .viewport {
   position: relative;
   width: 33.333%;
   text-align: center;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .progress .sectors .sector:after {
   position: absolute;
@@ -3217,7 +3217,7 @@ html.debug .viewport {
   bottom: 40px;
   right: 270px;
   position: absolute;
-  background: url(files/radar2.2973d1a4e46993f300c52e1c1a392714.png);
+  background: url(files/radar2.svg);
   opacity: 0;
 }
 .spottingContainer.shouldShow {
@@ -3238,10 +3238,10 @@ html.debug .viewport {
   z-index: -1;
 }
 .spottingContainer .warning.left {
-  background: url(files/gridWarningLeft.fb73cfd34ae03a5d0b33025dac382449.png);
+  background: url(files/gridWarningLeft.png);
 }
 .spottingContainer .warning.right {
-  background: url(files/gridWarningRight.1fe5a6641a82b6e43acea3cd73477fd1.png);
+  background: url(files/gridWarningRight.png);
 }
 .spotting {
   transform-origin: top left;
@@ -3537,7 +3537,7 @@ html.debug .viewport {
   top: 930px;
   left: 1890px;
   padding: 10px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .damage .carDamage {
   position: absolute;
@@ -3585,7 +3585,7 @@ html.debug .viewport {
   top: 940px;
   left: 1750px;
   margin-right: 10px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
   opacity: 1;
 }
 .tires .wheel {
@@ -3752,7 +3752,7 @@ html.debug .viewport {
   top: 940px;
   left: 1750px;
   margin-right: 10px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
   opacity: 1;
 }
 .tiresa .wheel {
@@ -4067,7 +4067,7 @@ html.debug .viewport {
   border-radius: 5px;
   border: 1px solid hsla(0, 0%, 100%, 0);
   background: rgba(0, 0, 0, 0.4);
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .cornerNamesContainer,
 .cornerNamesContainer .trackNameTextContainer {
@@ -4401,7 +4401,7 @@ html.debug .viewport {
 .tvTowerContainer .tvTower .mandatoryPitHeaderText {
   color: #fff;
   z-index: 4;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .tvTowerContainer .tvTower .player {
   position: relative;
@@ -4420,7 +4420,7 @@ html.debug .viewport {
 }
 .tvTowerContainer .tvTower .player .name,
 .tvTowerContainer .tvTower .player .position {
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
   text-align: center;
   display: inline-block;
 }
@@ -4477,7 +4477,7 @@ html.debug .viewport {
 }
 .tvTowerContainer .tvTower .player .diff,
 .tvTowerContainer .tvTower .player .pitting {
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
   display: inline-block;
   text-align: center;
 }
@@ -4513,7 +4513,7 @@ html.debug .viewport {
   z-index: -1;
   height: 23px;
   left: 4px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .tvTowerContainer .tvTower .player .pitting .pittime.noShadow {
   text-shadow: 2px 2px 2px transparent, 0 0 10px transparent;
@@ -4530,7 +4530,7 @@ html.debug .viewport {
   z-index: -1;
   height: 23px;
   left: 4px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
 }
 .tvTowerContainer .tvTower .player .pitting .pittimea.noShadow {
   text-shadow: 2px 2px 2px transparent, 0 0 10px transparent;
@@ -4578,7 +4578,7 @@ html.debug .viewport {
   width: 21px;
   height: 21px;
   color: #fff;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0px -0.5px 6px rgba(50, 50, 50, 0.7);
   overflow: visible;
   text-align: center;
   white-space: nowrap;
@@ -5356,10 +5356,11 @@ html.debug .viewport {
   top: 405px;
   font-family: EurasiaEx;
   white-space: pre;
+  font-size: 14px;
 }
 .info .warning {
   background: rgba(0, 0, 0, 0.8);
-  padding: 3px 5px 3px 16px;
+  padding: 5px 5px 3px 18px;
   border-radius: 5px;
   margin-bottom: 5px;
   position: relative;

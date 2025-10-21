@@ -137,7 +137,7 @@
       }
       Object(r.C)(Object(o.a)("Restored UI"));
     }
-
+	// ---- LOAD/SAVE HUD DATA ON RR'S BROWSER ----
     function Z(e) {
       try {
         if (((Y = JSON.parse(e)), !Object(i.a)(Y))) return;
@@ -3936,6 +3936,7 @@
           Engine: "Motor",
           "Engine Braking:": "Motor-Bremse:",
           "Engine Map:": "Motor-Stufe:",
+		  "ABS:": "ABS:",
           English: "Englisch",
           "Est. Pos": "Vorauss. Position",
           "Est. Time": "Vorauss. Zeit",
@@ -4227,6 +4228,7 @@
           Engine: "Engine",
           "Engine Braking:": "Engine Braking:",
           "Engine Map:": "Engine Map:",
+		  "ABS:": "ABS:",
           English: "English",
           "Est. Pos": "Est. Pos",
           "Est. Time": "Est. Time",
@@ -4518,6 +4520,7 @@
           Engine: "Moteur",
           "Engine Braking:": "Frein Moteur:",
           "Engine Map:": "Cartographie Moteur:",
+		  "ABS:": "ABS:",
           English: "Anglais",
           "Est. Pos": "Pos. Est.",
           "Est. Time": "Temps Est.",
@@ -4809,6 +4812,7 @@
           Engine: "Motor",
           "Engine Braking:": "Trava de motor:",
           "Engine Map:": "Mapa do motor:",
+		  "ABS:": "ABS:",
           English: "Inglês",
           "Est. Pos": "Pos. Est.",
           "Est. Time": "Tempo Est.",
@@ -5100,6 +5104,7 @@
           Engine: "Motore",
           "Engine Braking:": "Freno motore:",
           "Engine Map:": "Mappa motore:",
+		  "ABS:": "ABS:",
           English: "Inglese",
           "Est. Pos": "Pos. stim.",
           "Est. Time": "Tempo stim.",
@@ -5391,6 +5396,7 @@
           Engine: "Motor",
           "Engine Braking:": "Freno Motor:",
           "Engine Map:": "Mapa Motor",
+		  "ABS:": "ABS:",
           English: "Inglés",
           "Est. Pos": "Pos. Est.",
           "Est. Time": "Tiempo Est.",
@@ -5682,6 +5688,7 @@
           Engine: "Silnik",
           "Engine Braking:": "Hamowanie Silnikiem:",
           "Engine Map:": "Mapa silnika:",
+		  "ABS:": "ABS:",
           English: "Angielski",
           "Est. Pos": "Szac. Pozycja",
           "Est. Time": "Szac. Czas",
@@ -9732,7 +9739,7 @@
                         if (850 <= t && t <= 977) return "Telegrafenbogen";
                         if (978 <= t && t <= 1085) return "Kommandatur";
                         if (1086 <= t && t <= 1284) return "Mausefalle";
-                        if (1285 <= t && t <= 1445) return "Steilwand";
+                        if (1285 <= t && t <= 1445) return "Steilwand"; 
                         if (1446 <= t && t <= 1532) return "Bilster Kuppe";
                       } else if (2520 === e) {
                         if (1600 <= t || t <= 104) return "Start-Finish";
@@ -87437,6 +87444,7 @@
               BrakeBias: Object(Dn.a)("Brake Bias:"),
               EngineBraking: Object(Dn.a)("Engine Braking:"),
               EngineMap: Object(Dn.a)("Engine Map:"),
+			  Abs: Object(Dn.a)("ABS:"),
             }),
             (a.penaltyTimes = {
               DriveThrough: 0,
@@ -87444,7 +87452,9 @@
               PitStop: 0,
               TimeDeduction: 0,
               SlowDown: 0,
-            }),
+            }),			
+			(a.slowDownStartTime = null),  // slowdown start timestamp
+			(a.slowDownRemaining = 60),    // slowdown timer seconds to countdown			
             (a.penaltyTexts = {
               DriveThrough: Object(Dn.a)("Drive Through Penalty"),
               StopAndGo: Object(Dn.a)("Stop And Go Penalty"),
@@ -87466,7 +87476,8 @@
             (a.isHillClimb = !1),
             (a.lapDistance = -1),
             (a.pitEntrance = -1),
-            (a.pitDistance = -1),
+            (a.pitDistance = -1),			
+			// ---- UPDATE METHOD ----
             (a.update = function() {
               if (
                 (Ss && 33 <= In.c - a.lastCheck) ||
@@ -87489,6 +87500,8 @@
                       SlowDown: 0,
                     } :
                     In.a.data.Penalties),
+				  // Corrige comportamento DriveThrough: RaceRoom envia 0=ativo, -1=inativo
+				  (a.penalties && typeof a.penalties.DriveThrough !== "undefined" && (a.penalties.DriveThrough = a.penalties.DriveThrough === 0 ? 1 : 0)),
                   (a.completedLaps = In.a.data.CompletedLaps),
                   (a.lapTimeBestSelf = In.a.data.LapTimeBestSelf),
                   (a.notInRace = a.sessionType !== Ia.Race),
@@ -87497,9 +87510,7 @@
                       (0 < a.completedLaps ||
                         a.isLeaderboard ||
                         0 === In.a.data.LapValidState)) ||
-                    (a.sessionType === Ia.Qualify &&
-                      a.lapTimeBestSelf === T.a) ||
-                    a.isHillClimb),
+                    (a.sessionType === Ia.Qualify && a.lapTimeBestSelf === T.a) || a.isHillClimb),
                   (a.showLapInvalid = a.notInRace && !a.hasValidLap),
                   (a.showNextLapInvalid =
                     a.notInRace && 2 === In.a.data.LapValidState),
@@ -87568,7 +87579,13 @@
                     ].PenaltyReason),
                   a.penalties.SlowDown <= 0 &&
                   0 !== a.penaltyTimes.SlowDown &&
-                  (a.penaltyTimes.SlowDown = 0),
+                  (a.penaltyTimes.SlowDown = 0),					
+				// --- SlowDown controller (real-time 60s)
+				In.a?.data?.Penalties?.SlowDown !== -1
+				  ? (!a.slowDownStartTime
+					  ? ((a.slowDownStartTime = Date.now()), (a.slowDownRemaining = 60))
+					  : (a.slowDownRemaining = Math.max(0, 60 - (Date.now() - a.slowDownStartTime) / 1000)))
+				  : ((a.slowDownStartTime = null), (a.slowDownRemaining = 60)),				  
                   (a.eTimes.PitRequest =
                     1 === In.a.data.PitState && In.a.data.InPitlane < 1 ?
                     In.c + 1e3 :
@@ -87593,6 +87610,13 @@
                   (-99 !== a.eValues.EngineBraking &&
                     (a.eTimes.EngineBraking = In.c + 5e3),
                     (a.eValues.EngineBraking = n));
+					
+				var w = In.a.data.AbsSetting;
+                w !== a.eValues.Abs &&
+                  (-99 !== a.eValues.Abs &&
+                    (a.eTimes.Abs = In.c + 5e3),
+                    (a.eValues.Abs = w));	
+					
                 var r = In.a.data.EngineMapSetting;
                 (r !== a.eValues.EngineMap &&
                   (-99 !== a.eValues.EngineMap &&
@@ -87702,20 +87726,29 @@
                     );
                 }
                 break;
-              case "SlowDown":
-                switch (t) {
-                  case 1:
-                    n = Object(Dn.a)("Reason: Track Limits Abuse");
-                    break;
-                  case 2:
-                    n = Object(Dn.a)("Reason: Multiple Track Limit Abuse");
-                    break;
-                  case 3:
-                    n = Object(Dn.a)(
-                      "Reason: Accumulating the Maximum Number of Penalties Permitted",
-                    );
-                }
-                break;
+			case "SlowDown":
+			  switch (t) {
+				case 1:
+				  n = Object(Dn.a)("Reason: Track Limits");
+				  break;
+				case 2:
+				  n = Object(Dn.a)("Reason: Multiple Track Limit Abuse");
+				  break;
+				case 3:
+				  n = Object(Dn.a)("Reason: Accumulating the Maximum Number of Penalties Permitted");
+				  break;
+				default:
+				  n = Object(Dn.a)("Reason: Slow Down Penalty");
+			  }
+			  // Show time to give back
+			  if (In.a?.data?.Penalties?.SlowDown && In.a.data.Penalties.SlowDown > 0) {
+				n += " (" + In.a.data.Penalties.SlowDown.toFixed(2) + "s to give back)";
+			  }
+			  // Show 60s timer
+			  if (this.slowDownStartTime) {
+				n += " | " + this.slowDownRemaining.toFixed(0) + "s left";
+			  }
+			  break;
               case "Disqualify":
                 switch (t) {
                   case 0:
@@ -88234,7 +88267,7 @@
             (n.gear = 0),
             (n.limiter = !1),
             (n.engineMap = 0),
-            (n.engineBrake = 0),
+            (n.abs = 0),
             (n.tractionLevel = 0),
             (n.brakeBias = 0),
             (n.gearNameLookup = {}),
@@ -88314,7 +88347,7 @@
                   (n.gear = In.a.data.Gear),
                   (n.limiter = 0 < In.a.data.PitLimiter && 0 < n.engineState),
                   (n.engineMap = In.a.data.EngineMapSetting),
-                  (n.engineBrake = In.a.data.EngineBrakeSetting),
+				  (n.abs = In.a.data.AbsSetting),
                   (n.brakeBias = In.a.data.BrakeRaw === 0 ? 100 - 100 * In.a.data.BrakeBias : n.brakeBias),
                   (n.tractionLevel = In.a.data.TractionControlSetting),
                   (n.sessionType = In.a.data.SessionType),
@@ -88468,32 +88501,32 @@
               e &&
               (Zs ||
                 (this.playerIsFocus &&
-                  -1 !== this.engineBrake &&
+                  -1 !== this.abs &&
                   0 < this.engineState)) &&
               ft.a.createElement(
                 "div", {
-                  className: "engineBrakeBox",
+                  className: "absBox",
                   style: {
                     background: this.engineState < 1 && !Zs ? "black" : void 0,
                   },
                 },
                 ft.a.createElement(
                   "div", {
-                    className: "engineBrakeLabel mono",
+                    className: "absLabel mono",
                     style: {
                       color: 0 < this.engineState || Zs ? "white" : "silver",
                     },
                   },
-                  "EB:",
+                  "ABS:",
                 ),
                 ft.a.createElement(
                   "div", {
-                    className: "engineBrake mono",
+                    className: "abs mono",
                     style: {
                       color: 0 < this.engineState || Zs ? "white" : "silver",
                     },
                   },
-                  "" + (-1 !== this.engineBrake ? this.engineBrake : 3),
+                  "" + (-1 !== this.abs ? this.abs : 3),
                 ),
               ),
               this.props.settings.subSettings.showECU.enabled &&
@@ -88602,7 +88635,7 @@
           Ii([pt.k], e.prototype, "gear", void 0),
           Ii([pt.k], e.prototype, "limiter", void 0),
           Ii([pt.k], e.prototype, "engineMap", void 0),
-          Ii([pt.k], e.prototype, "engineBrake", void 0),
+          Ii([pt.k], e.prototype, "abs", void 0),
           Ii([pt.k], e.prototype, "tractionLevel", void 0),
           Ii([pt.k], e.prototype, "brakeBias", void 0),
           Ii([pt.k], e.prototype, "lastCheck", void 0),
@@ -102746,7 +102779,7 @@
       Is = !1,
       _s = window.clientInformation.appVersion.toString().match(/64.0/),
       // ---- VERSION (HUD CURRENT VERSION) ----
-      Ms = 0.4,
+      Ms = 0.5,
       js = (function(t) {
         function e(e) {
           var u = t.call(this, e) || this;
@@ -105889,22 +105922,9 @@
                       ft.a.createElement(
                         "li",
                         null,
-                        "Fix for widgets disappearing when trying to move them.",
+                        "Raceinfo Widget - Fix for DriveThrough penalties",
                         ft.a.createElement("br", null),
-                        "Widgets were moving away from the mouse cursor when dragging them in resolutions other than 1080p. The HUD now supports all resolutions.",
-                        ft.a.createElement("br", null),
-                      ),
-                    ),
-					
-					ft.a.createElement(
-                      "ul",
-                      null,
-                      ft.a.createElement(
-                        "li",
-                        null,
-                        "Added - Track Data for AVUS circuit",
-                        ft.a.createElement("br", null),
-                        "This includes all track details (Name, LayoutName, Length, Corner Names) and all pit-spot positions.",
+                        "DriveThrough penalties were not working due to a failure to read data from the new API. Now it's fixed!",
                         ft.a.createElement("br", null),
                       ),
                     ),
@@ -105915,9 +105935,9 @@
                       ft.a.createElement(
                         "li",
                         null,
-                        "Added - Track Data for Alemanring circuit",
+                        "Raceinfo Widget - Fix for SlowDown info",
                         ft.a.createElement("br", null),
-                        "This includes all track details (Name, LayoutName, Length, Corner Names) and all pit-spot positions.",
+                        "Slow down penalties now display both the time to give back and the time remaining to serve the penalty.",
                         ft.a.createElement("br", null),
                       ),
                     ),
@@ -105928,9 +105948,48 @@
                       ft.a.createElement(
                         "li",
                         null,
-                        "Added - Track Data for Donington Park",
+                        "Raceinfo Widget - ABS",
                         ft.a.createElement("br", null),
-                        "This includes all track details (Name, LayoutName, Length, Corner Names) and all pit-spot positions.",
+                        "Widget now displays ABS level changes.",
+                        ft.a.createElement("br", null),
+                      ),
+                    ),
+					
+					ft.a.createElement(
+                      "ul",
+                      null,
+                      ft.a.createElement(
+                        "li",
+                        null,
+                        "Motec wdiget - ABS",
+                        ft.a.createElement("br", null),
+                        "Motec now displays ABS level changes.",
+                        ft.a.createElement("br", null),
+                      ),
+                    ),
+					
+					ft.a.createElement(
+                      "ul",
+                      null,
+                      ft.a.createElement(
+                        "li",
+                        null,
+                        "New radar graph",
+                        ft.a.createElement("br", null),
+                        "Radar now uses an SVG format for better image quality. Thanks to Mad Day Man (the LEGO guy) for the art.",
+                        ft.a.createElement("br", null),
+                      ),
+                    ),
+					
+					ft.a.createElement(
+                      "ul",
+                      null,
+                      ft.a.createElement(
+                        "li",
+                        null,
+                        "Styles",
+                        ft.a.createElement("br", null),
+                        "Some tweaks on fonts and shadows to make it look cleaner.",
                         ft.a.createElement("br", null),
                       ),
                     ),
@@ -106107,7 +106166,9 @@
                     ft.a.createElement("br", null),
                     "HUGE THANKS to everyone on the forum who has been reporting bugs and helping improve this HUD.",
                     ft.a.createElement("br", null),
-                    "A very special thanks to Pedro Santana for collecting all track data, and also for supporting this project.",
+                    "**ATENTION**: Starting December 1, 2025, SealHud will ONLY be available at https://sealhud.github.io/. The 'dsjunges83' repository will no longer work. Make sure you set the correct parameter in the Steam launcher:",
+					ft.a.createElement("br", null),
+                    "-webHudUrl=https://sealhud.github.io/",
                     ft.a.createElement("br", null),
                     ft.a.createElement("br", null),
                     "SealHud is free to use and it's based on OtterHud.",
@@ -106117,7 +106178,11 @@
                     ft.a.createElement("br", null),
                     "As once said by Otter: Moo!",
                     ft.a.createElement("br", null),
-                    "SealHUD Team",
+                    "SealHUD Team:",
+					ft.a.createElement("br", null),
+                    "- Diego Junges",
+					ft.a.createElement("br", null),
+                    "- Pedro Santana",
                   ),
                   ft.a.createElement(
                     "div", {
@@ -106331,34 +106396,6 @@
               }),
             );
           }),
-		  // ---- REMOVE? ----
-          (e.prototype.getRanking = function() {
-            return ft.a.createElement(
-              "div", {
-                className: "rankingSite",
-                style: {
-                  position: "absolute",
-                  width: "1920px",
-                  height: "1080px",
-                  zoom: "1",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                  cursor: "auto",
-                },
-              },
-              ft.a.createElement("iframe", {
-                className: "rankingSiteFrame",
-                src: this.rankingUrl,
-                style: {
-                  width: "1920px",
-                  height: "1080px",
-                  cursor: "auto",
-                },
-              }),
-            );
-          }),
-		  // ---- END REMOVE ----
           (e.prototype.getAppSettings = function() {
             var n = this;
             return ft.a.createElement(
@@ -112832,9 +112869,9 @@
       engineMapBox: "engineMapBox",
       engineMapLabel: "engineMapLabel",
       engineMap: "engineMap",
-      engineBrakeBox: "engineBrakeBox",
-      engineBrakeLabel: "engineBrakeLabel",
-      engineBrake: "engineBrake",
+      absBox: "absBox",
+      absLabel: "absLabel",
+      abs: "abs",
       tractionLevelBox: "tractionLevelBox",
       tractionLevelLabel: "tractionLevelLabel",
       tractionLevel: "tractionLevel",
