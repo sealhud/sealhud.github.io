@@ -4,7 +4,7 @@
 		- RaceInfo Widget: DriveThrough penalties were not working due to a failure to read data from the new API. Now it's fixed!
 		- RaceInfo Widget: Slow down penalties now display both the time to give back and the time remaining to serve the penalty.
 		- RaceInfo and Motec widgets now displays ABS level changes.
-		- Radar now uses an SVG format for better image quality. Thanks to Mad May Man for the art.
+		- Radar now uses an SVG format for better image quality. Thanks to Mad Day Man for the art.
 		- Some tweaks on fonts and shadows to make it look cleaner.
 		
 		0.4
