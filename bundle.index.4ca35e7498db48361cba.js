@@ -3888,6 +3888,7 @@
   },
   function(e, t, n) {
     "use strict";
+	// ---- TRANSLATIONS ----
     var r = n(2),
       a = {
         de: {
@@ -3963,7 +3964,7 @@
           German: "Deutsch",
           "Go!": "Los!",
           "Hazard on the track": "Gefahr auf der Strecke",
-		  "HeadLights": "Scheinwerfer",
+		  "HeadLights:": "Scheinwerfer:",
           "Hide in race": "Im Rennen ausblenden",
           "High Performance Mode": "Hoher Leistungsmodus",
           IGNITION: "ZÜNDUNG",
@@ -4068,6 +4069,7 @@
           "Reason: Overtaking under Yellow": "Grund: Überholen unter Gelb",
           "Reason: Speeding in the Pitlane": "Grund: Zu schnell in der Boxengasse",
           "Reason: Track Limits Abuse": "Grund: Verletzung der Streckenbegrenzung",
+		  "Reason: Track Limits": "Grund: Streckenbegrenzungen",
           "Received Layout-Settings: Saved to Layout": "Layout-Einstellungen Empfangen: Gespeichert als Layout",
           "Received Layout-Settings: [ERROR] Data was corrupt": "Layout-Einstellungen Empfangen: [ERROR] Daten waren Fehlerhaft",
           Refueling: "Auftanken",
@@ -4256,7 +4258,7 @@
           German: "German",
           "Go!": "Go!",
           "Hazard on the track": "Hazard on the track",
-          "HeadLights": "HeadLights",
+          "HeadLights:": "Head Lights:",
 		  "Hide in race": "Hide in race",
           "High Performance Mode": "High Performance Mode",
           IGNITION: "IGNITION",
@@ -4360,6 +4362,7 @@
           "Reason: Multiple Track Limit Abuse": "Reason: Multiple Track Limit Abuse",
           "Reason: Overtaking under Yellow": "Reason: Overtaking under Yellow",
           "Reason: Speeding in the Pitlane": "Reason: Speeding in the Pitlane",
+		  "Reason: Track Limits": "Reason: Track Limits",
           "Reason: Track Limits Abuse": "Reason: Track Limits Abuse",
           "Received Layout-Settings: Saved to Layout": "Received Layout-Settings: Saved to Layout",
           "Received Layout-Settings: [ERROR] Data was corrupt": "Received Layout-Settings: [ERROR] Data was corrupt",
@@ -4549,7 +4552,7 @@
           German: "Allemand",
           "Go!": "Go!",
           "Hazard on the track": "Danger sur la piste",
-		  "HeadLights": "Phares",
+		  "HeadLights:": "Phares:",
           "Hide in race": "Masquer en course",
           "High Performance Mode": "Mode Haute Performance",
           IGNITION: "CONTACT",
@@ -4653,6 +4656,7 @@
           "Reason: Multiple Track Limit Abuse": "Raison: Dépassement répété des limites du circuit",
           "Reason: Overtaking under Yellow": "Raison: Dépassement sous drapeau jaune",
           "Reason: Speeding in the Pitlane": "Raison: Dépassement de la limite de vitesse dans la voie des stands",
+		  "Reason: Track Limits": "Raison : Limites de piste",
           "Reason: Track Limits Abuse": "Raison: Dépassement des limites du circuit",
           "Received Layout-Settings: Saved to Layout": "Réception des Paramètres d'Affichage: Sauvegardés vers Affichage",
           "Received Layout-Settings: [ERROR] Data was corrupt": "Réception des Paramètres d'Affichage: [ERREUR] Données corrompues",
@@ -4842,7 +4846,7 @@
           German: "Alemão",
           "Go!": "Vai!",
           "Hazard on the track": "Perigo na pista",
-		  "HeadLights": "Luzes",
+		  "HeadLights:": "Luzes:",
           "Hide in race": "Ocultar na corrida",
           "High Performance Mode": "Modo alto de Performance",
           IGNITION: "Ignição",
@@ -4946,6 +4950,7 @@
           "Reason: Multiple Track Limit Abuse": "Motivo: Multiplos abusos do limite da pista",
           "Reason: Overtaking under Yellow": "Motivo: Ultrapassou durante a bandeira amarela",
           "Reason: Speeding in the Pitlane": "Motivo: Excesso de velocidade no Pit",
+		  "Reason: Track Limits": "Motivo: Limites de pista",
           "Reason: Track Limits Abuse": "Motivo: Abuso dos limites da pista",
           "Received Layout-Settings: Saved to Layout": "Configurações de layout recebidas: Salvo para o layout",
           "Received Layout-Settings: [ERROR] Data was corrupt": "Configurações de layout recebidas: [ERRO] Dados corrompidos",
@@ -5008,7 +5013,7 @@
           "Show full Lastname": "Mostrar último nome completo",
           "Show in all Sessions": "Mostrar em todas as sessões",
           "Show only Own Class": "Mostrar apenas na própria classe",
-          "Slow Down Penalty": "Penalidade de Slow Dowm",
+          "Slow Down Penalty": "Penalidade de Slow Down",
           "Slow cars ahead": "Veiculo lento a frente",
           Spanish: "Espanhol",
           "Speed in MPH": "Velocidade em MPH",
@@ -5135,7 +5140,7 @@
           German: "Tedesco",
           "Go!": "Vai!",
           "Hazard on the track": "Pericolo in pista",
-		  "HeadLights": "Fari",
+		  "HeadLights:": "Fari:",
           "Hide in race": "Nascondi in gara",
           "High Performance Mode": "Modalitá alte prestazioni",
           IGNITION: "AVVIAMENTO",
@@ -5239,6 +5244,7 @@
           "Reason: Multiple Track Limit Abuse": "Motivo: troppe volte oltre i limiti tracciato",
           "Reason: Overtaking under Yellow": "Motivo: sorpasso con bandiera Gialla",
           "Reason: Speeding in the Pitlane": "Motivo: velocitá eccessiva in Pitlane",
+		  "Reason: Track Limits": "Motivo: limiti della traccia",
           "Reason: Track Limits Abuse": "Motivo: oltre i limiti tracciato",
           "Received Layout-Settings: Saved to Layout": "Ricevuti Layout-Settings: Layout salvato",
           "Received Layout-Settings: [ERROR] Data was corrupt": "Ricevuti Layout-Settings: [ERROR] dati corrotti",
@@ -5428,7 +5434,7 @@
           German: "Alemán",
           "Go!": "Vamos!",
           "Hazard on the track": "Peligro en la pista",
-		  "HeadLights": "Faros",
+		  "HeadLights:": "Faros:",
           "Hide in race": "Ocultar en Carrera",
           "High Performance Mode": "Modo Alto Rendimiento",
           IGNITION: "ARRANQUE",
@@ -5532,6 +5538,7 @@
           "Reason: Multiple Track Limit Abuse": "Razón: Varios abusos límites de pista",
           "Reason: Overtaking under Yellow": "Razón: Adelantar bajo amarilla",
           "Reason: Speeding in the Pitlane": "Razón: Sobrepasar velocidad del Pitlane",
+		  "Reason: Track Limits": "Razón: Límites de pista",
           "Reason: Track Limits Abuse": "Razón: Abuso Límites de pista",
           "Received Layout-Settings: Saved to Layout": "Configuración Layout Recibida: Guardado en Layout",
           "Received Layout-Settings: [ERROR] Data was corrupt": "Configuración Layout Recibida: [ERROR] Datos Corruptos",
@@ -5721,7 +5728,7 @@
           German: "Niemiecki",
           "Go!": "Jedź!",
           "Hazard on the track": "Niebezpieczeństwo na torze",
-		  "HeadLights": "Reflektory",
+		  "HeadLights:": "Reflektory:",
           "Hide in race": "Ukryj podczas wyścigu",
           "High Performance Mode": "Tryb Wysokiej Wydajności",
           IGNITION: "ZAPŁON",
@@ -5825,6 +5832,7 @@
           "Reason: Multiple Track Limit Abuse": "Powód: Wielokrotne Wyjazdy Poza Limity Toru",
           "Reason: Overtaking under Yellow": "Powód: Wyprzedzanie podczas żółtych flag",
           "Reason: Speeding in the Pitlane": "Powód: Przekroczenie prędkości w Pitlane",
+		  "Reason: Track Limits":"Powód: Ograniczenia toru",
           "Reason: Track Limits Abuse": "Powód: Wyjazd poza limit toru",
           "Received Layout-Settings: Saved to Layout": "Otrzymano Ustawienia Nakładki: Zapisano do Nakładki",
           "Received Layout-Settings: [ERROR] Data was corrupt": "Otrzymano Ustawienia Nakładki: [BŁĄD] Dane są uszkodzone",
@@ -14708,6 +14716,7 @@
           (e = Wr([Sn], e))
         );
       })(ft.a.Component),
+	  // ---- RELATIVE TIMINGS DATA ---- 1st DATA GROUP: Meters / 2nd DATA GROUP: Time
       Vr = {
         "7111_7112_7982": [
           [96.237],
@@ -87613,9 +87622,11 @@
               PitStop: 0,
               TimeDeduction: 0,
               SlowDown: 0,
-            }),			
-			(a.slowDownStartTime = null),  // slowdown start timestamp
-			(a.slowDownRemaining = 60),    // slowdown timer seconds to countdown			
+            }),
+			(a.slowDownStartTime = null), // slowdown start timestamp
+			(a.slowDownRemaining = 60), // slowdown timer seconds to countdown	
+			(a.slowDownPaused = false), // pause countdown
+			(a.slowDownPauseTime = 0),		
             (a.penaltyTexts = {
               DriveThrough: Object(Dn.a)("Drive Through Penalty"),
               StopAndGo: Object(Dn.a)("Stop And Go Penalty"),
@@ -87741,12 +87752,24 @@
                   a.penalties.SlowDown <= 0 &&
                   0 !== a.penaltyTimes.SlowDown &&
                   (a.penaltyTimes.SlowDown = 0),					
-				// --- SlowDown controller (real-time 60s)
+				// --- SlowDown controller (real-time 60s, pausa nos boxes)
 				In.a?.data?.Penalties?.SlowDown !== -1
 				  ? (!a.slowDownStartTime
-					  ? ((a.slowDownStartTime = Date.now()), (a.slowDownRemaining = 60))
-					  : (a.slowDownRemaining = Math.max(0, 60 - (Date.now() - a.slowDownStartTime) / 1000)))
-				  : ((a.slowDownStartTime = null), (a.slowDownRemaining = 60)),				  
+					  ? ((a.slowDownStartTime = Date.now()),
+						(a.slowDownRemaining = 60),
+						(a.slowDownPaused = !1),
+						(a.slowDownPauseTime = 0))
+					  : (In.a?.data?.InPitlane === 1
+						  ? (a.slowDownPaused || ((a.slowDownPaused = !0), (a.slowDownPauseTime = Date.now())))
+						  : (a.slowDownPaused &&
+							  ((a.slowDownPaused = !1),
+							  (a.slowDownStartTime += Date.now() - a.slowDownPauseTime))),
+						a.slowDownPaused ||
+						  (a.slowDownRemaining = Math.max(0, 60 - (Date.now() - a.slowDownStartTime) / 1000))))
+				  : ((a.slowDownStartTime = null),
+					(a.slowDownRemaining = 60),
+					(a.slowDownPaused = !1)),	
+				  //----
                   (a.eTimes.PitRequest =
                     1 === In.a.data.PitState && In.a.data.InPitlane < 1 ?
                     In.c + 1e3 :
@@ -87911,11 +87934,11 @@
 			  }
 			  // Show time to give back
 			  if (In.a?.data?.Penalties?.SlowDown && In.a.data.Penalties.SlowDown > 0) {
-				n += " (" + In.a.data.Penalties.SlowDown.toFixed(2) + "s to give back)";
+				n += " (" + In.a.data.Penalties.SlowDown.toFixed(2) + Object(Dn.a)("s.) | ");
 			  }
 			  // Show 60s timer
 			  if (this.slowDownStartTime) {
-				n += " | " + this.slowDownRemaining.toFixed(0) + "s left";
+				n += Object(Dn.a)("Serve within") + this.slowDownRemaining.toFixed(0) + "s.";
 			  }
 			  break;
               case "Disqualify":
