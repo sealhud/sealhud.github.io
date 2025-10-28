@@ -1,18 +1,58 @@
-# SealHUD Redirect Repository
+# SealHUD
 
-This is a WebHud for Raceroom based on original OtterHud.
-Since OtterHud is not being updated anymore and it still works with its telemetry, I created this new repository on GitHub where I can make simple fixes and keep it minimally updated.
+SealHUD is an advanced web-based HUD for **RaceRoom Racing Experience**, originally inspired by the discontinued **OtterHud** project.  
+Since its creation, SealHUD has evolved far beyond the original code — featuring redesigned widgets, updated telemetry integration, and many improvements and fixes.
 
-In order to make it usable, you need to change the Raceroom launch parameter on STEAM and point it to my repository: 
+---
 
--webHudUrl=https://sealhud.github.io/
+## 🧩 About the Project
 
-Remember to update your CrewChief to the latest version, or if you use dash.exe, update the executable to the newest version: https://sealhud.github.io/dash.zip
+SealHUD continues the legacy of OtterHud while introducing major updates, such as:
 
-If more people are interested in contributing to the maintenance of this dash, they are more than welcome.
+- Reworked and modernized widgets  
+- Additional telemetry data and improved accuracy  
+- Updated compatibility with the latest RaceRoom versions  
+- Fixes for outdated or broken elements from the original project  
+- Ongoing improvements and maintenance by the SealHUD Team  
 
-More information can be found here:
-https://forum.kw-studios.com/index.php?threads/new-repository-and-fix-for-otterhud.20675/
+This project aims to provide a stable, customizable, and modern HUD experience for the RaceRoom community.
 
-Cheers. =D
-SealHud Team
+---
+
+## 🚀 How to Use
+
+1. In your **Steam Library**, right-click on *RaceRoom Racing Experience* → **Properties** → **Launch Options**  
+2. Add the following parameter: -webHudUrl=https://sealhud.github.io/
+3. Make sure your **CrewChief** or **dash.exe** is updated to the latest version:  
+👉 [Download dash.exe (latest)](https://sealhud.github.io/dash.zip)
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+If you wish to collaborate with the development or maintenance of SealHUD, feel free to open issues or pull requests.  
+Every improvement helps the community.
+
+---
+
+## 💬 Discussion
+
+You can follow updates and discussions about SealHUD here:  
+🔗 [KW Studios Forum Thread](https://forum.kw-studios.com/index.php?threads/new-repository-and-fix-for-otterhud.20675/)
+
+---
+
+## ⚖️ License & Credits
+
+> **Note:** The *OtterHud* project, on which this work is based, was published without an explicit license.  
+> This fork was created in good faith, with proper credit and attribution to the original author, following common open-source community practices.  
+> All new or modified code in this project is licensed under the [MIT License](LICENSE).
+
+© 2025 **Diego Junges**, **Pedro Santana** and SealHUD contributors.  
+All rights to the original *OtterHud* code belong to its respective author(s).
+
+---
+
+### Cheers,  
+**SealHUD Team**
