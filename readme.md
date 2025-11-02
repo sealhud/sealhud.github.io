@@ -54,5 +54,14 @@ All rights to the original *OtterHud* code belong to its respective author(s).
 
 ---
 
+## ☕ Support the Project
+
+If you enjoy using SealHUD and would like to support continued development, you can contribute to future updates and improvements.  
+Donations will help maintain the project and reward ongoing development efforts.
+
+🔗 [PayPal Donation Link](https://www.paypal.com/donate/?hosted_button_id=85SPZAJT797MS)
+
+---
+
 ### Cheers,  
 **SealHUD Team**
