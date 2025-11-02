@@ -1,9 +1,17 @@
+	0.7
+	----------		
+	GENERAL
+	- Added track relative timings for Zandvoort 2025.
+	- RaceInfo Widget: Now shows ´Pit limiter´ status info.
+	- New Widget: INPUTS GRAPH - Realtime graphic telemetry for throttle, brake and clutch inputs.
+	- New donation link.
+
 	0.6
 	----------		
 	GENERAL
 	- Added track data (Name, Layouts, Length, Corner Names, Pit entrance and Pit Spots) for: Circuit de Charade, Circuit De Pau Ville, Circuit Zandvoort (2025), DEKRA Lausitzring GP Course Oval T1, Estoril Circuit, Fliegerhorst Diepholz and Hockenheimring Classic.
 	- Added track relative timings for: Interlagos and Circuit de Pau Ville.
-	- RaceInfo Widget: Now shows headlights info
+	- RaceInfo Widget: Now shows headlights info.
 	- Motec Widget: Now always shows electronics, even for cars that doesn't have any (for those it will show: NA)
 	- Motec Widget: RPM bar wasn't working. Fixed.
 	- Correction on some translations
