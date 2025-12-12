@@ -1,8 +1,21 @@
+	0.9
+	----------		
+	GENERAL
+	- TV Tower: Intervals between players are now displayed in M:SS.S format. Showing M:SS.SSS was unnecessary.
+	- TV Tower / Position Bar: In multiclass races, the pit counter (number of pitstops per driver) was not working. Fixed.
+	- TV Tower / Position Bar / Relatives: During yellow-flag situations, slower drivers are now highlighted in yellow.
+	- Position Bar: Strength of Field was not accounting for drivers on invalid laps, causing the value to change during the race. The calculation is now consistent and accurate for all drivers.
+	- Position Bar: Added information on how many times the player cut the track.
+	- Relatives: No new car names had been mapped since 2021. All car names are now up to date.
+	- Relatives: The player's name was missing when only two drivers were on track. Fixed.
+	- Relatives: The gap was being calculated incorrectly when drivers were one lap ahead or one lap behind. Now, the HUD estimates the gap using the player's best lap.
+	- Performance: SealHUD has been restructured. Driver data such as lap information, pit events, and flag events is now centralized, making the HUD lighter and more CPU-efficient.
+	
 	0.8
 	----------		
 	GENERAL
 	- Position Bar, TV Tower and Relative timings: HUGE amount of work went into getting this to work correctly. Now, the gaps between drivers are identical to those in RaceRoom telemetry. Furthermore, there's no more delay in generating times, as everything is done in "live mode". We also no longer need to collect track data for this! \õ/
-	- Performance modes: Fixed! They simply weren't working and it made no difference which one you chose. Now you can select one of the 3 available modes: Low Performance (10 fps), Normal (30 fps) and High Performance (60 fps).
+	- Performance modes: Fixed! They simply weren't working and it made no difference which one you chose. Now you can select one of the 3 available modes: Low Performance (15 fps), Normal (30 fps) and High Performance (60 fps).
 	- Inputs Graph Widget: Now user can change the duration time telemetry data will be kept.
 	- Inputs Graph Widget: Included "input meters" option, for clutch, brake, throttle and steering wheel. This option extends the widget.
 	- Position Bar: "Show penalties" option included. This will show penalties for all drivers in the field.
