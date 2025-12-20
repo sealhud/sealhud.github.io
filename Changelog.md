@@ -1,3 +1,11 @@
+	0.91
+	----------		
+	GENERAL
+	- TV Tower / Position Bar: Pit times were being summed, so when a driver performed more than one stop, the pit time was displayed incorrectly. Fixed.
+	- Standings Bar: The "position info" block was exploding upwards when showing the position gained/lost. Fixed.
+	- Yellow-flag detection: Some improvements for better detection quality.
+	- Position Bar: If a race has no incident limit, it will now display "N/A", so the track cut counter remains enabled.
+
 	0.9
 	----------		
 	GENERAL
