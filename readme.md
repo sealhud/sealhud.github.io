@@ -49,7 +49,7 @@ You can follow updates and discussions about SealHUD here:
 > This fork was created in good faith, with proper credit and attribution to the original author, following common open-source community practices.  
 > All new or modified code in this project is licensed under the [MIT License](LICENSE).
 
-© 2025 **Diego Junges**, **Pedro Santana** and SealHUD contributors.  
+© 2025 **Diego Junges** and SealHUD contributors.  
 All rights to the original *OtterHud* code belong to its respective author(s).
 
 ---
