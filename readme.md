@@ -12,7 +12,6 @@ SealHUD continues the legacy of OtterHud while introducing major updates, such a
 - Reworked and modernized widgets  
 - Additional telemetry data and improved accuracy  
 - Updated compatibility with the latest RaceRoom versions  
-- Fixes for outdated or broken elements from the original project  
 - Ongoing improvements and maintenance by the SealHUD Team  
 
 This project aims to provide a stable, customizable, and modern HUD experience for the RaceRoom community.
@@ -39,18 +38,15 @@ Every improvement helps the community.
 ## 💬 Discussion
 
 You can follow updates and discussions about SealHUD here:  
-🔗 [KW Studios Forum Thread](https://forum.kw-studios.com/index.php?threads/new-repository-and-fix-for-otterhud.20675/)
+🔗 [KW Studios Forum Thread](https://forum.kw-studios.com/index.php?threads/sealhud-webhud.20675/)
 
 ---
 
 ## ⚖️ License & Credits
 
-> **Note:** The *OtterHud* project, on which this work is based, was published without an explicit license.  
-> This fork was created in good faith, with proper credit and attribution to the original author, following common open-source community practices.  
-> All new or modified code in this project is licensed under the [MIT License](LICENSE).
+> **Note:** All the code in this project is licensed under the [MIT License](LICENSE).
 
-© 2025 **Diego Junges** and SealHUD contributors.  
-All rights to the original *OtterHud* code belong to its respective author(s).
+© 2026 **Diego Junges** and SealHUD contributors.
 
 ---
 
@@ -63,5 +59,5 @@ Donations will help maintain the project and reward ongoing development efforts.
 
 ---
 
-### Cheers,  
+### Drive Safe,  
 **SealHUD Team**
