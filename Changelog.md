@@ -1,3 +1,41 @@
+	1.00
+	----------
+	SealHUD is not a fork anymore.
+	And now the HUD supports all RaceRoom vehicles, including trucks!
+
+	ATTENTION:
+	As this is a major HUD update, previous data (fuel consumption, lap times, etc.) will be lost.
+	I apologize for this, but it is for your own good!
+
+	UI:
+	- Nearly all widgets have been redesigned. Highlights include: Motec, Fuel & Lap Details, Damage, Inputs, Race Info, Clock, CrewChief, and Delta.
+	- New interface for the settings screen and widget selection.
+	- Units for temperature, pressure, and speed are now defined globally in the settings screen.
+	- Widget drag grid is now CSS-based (lighter and cleaner).
+	- New widgets added: **ELECTRONICS** and **CONSUMPTION**.
+	- Removed widgets: **P2P/DRS** and **FUEL**.
+
+	WIDGETS:
+	- Fuel & Lap Details: Now also displays virtual energy consumption data.
+	- Fuel & Lap Details: Calculator now includes virtual energy estimates.
+	- Fuel & Lap Details: Fixed a bug that caused some laps not to be recorded.
+	- Motec: Now correctly displays gears for all vehicles, including trucks.
+	- Motec: RPM bar temporarily removed.
+	- Electronics (new):
+		Displays water temperature conditions, headlight status, engine map, brake bias, ABS, and TC.
+		Also shows overtaking assists such as DRS, Push To Pass, and Overtake (used by Formula X22 and others).
+	- Consumption (new):
+		Provides a vehicle consumption overview, with support for liquid fuel, virtual energy, and battery.
+		Displays available amount, per-lap average, and estimated requirement to reach the finish.
+	- Race Info: Added display of brake cooling water consumption (used by trucks).
+	- CrewChief: Widget redesigned.
+	- CrewChief: Now displays your team name.
+	- Driving Aids: Allows switching between HORIZONTAL and VERTICAL modes.
+	- Inputs Graph: Line smoothing removed for more accurate telemetry representation.
+
+	PERFORMANCE:
+	- All fuel, virtual energy, and battery consumption calculations were rebuilt from scratch. They are now centralized, executed once, and shared across widgets for better performance and consistency.
+
 	0.92
 	----------		
 	GENERAL
