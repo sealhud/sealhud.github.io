@@ -1,0 +1,47 @@
+name: Update RaceRoom Ratings Cache
+
+on:
+  schedule:
+    - cron: '0 */2 * * *' # a cada 2 horas
+  workflow_dispatch: # permite rodar manualmente
+
+jobs:
+  update-ratings:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create target directory
+        run: mkdir -p public/raceroom
+
+      - name: Download ratings.json from RaceRoom
+        run: |
+          curl -L --fail \
+            https://game.raceroom.com/multiplayer-rating/ratings.json \
+            -o public/raceroom/ratings.json
+
+      - name: Validate JSON (basic check)
+        run: |
+          node -e "
+          const fs = require('fs');
+          const data = JSON.parse(fs.readFileSync('public/raceroom/ratings.json', 'utf8'));
+          if (!Array.isArray(data) || data.length === 0) {
+            console.error('Invalid ratings.json');
+            process.exit(1);
+          }
+          console.log('ratings.json OK, entries:', data.length);
+          "
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "sealhud-bot"
+          git config user.email "sealhud-bot@users.noreply.github.com"
+
+          git add public/raceroom/ratings.json
+
+          git diff --cached --quiet && echo "No changes" || (
+            git commit -m "Update RaceRoom ratings cache"
+            git push
+          )
