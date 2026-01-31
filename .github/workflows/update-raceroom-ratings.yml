@@ -2,7 +2,7 @@ name: Update RaceRoom Ratings Cache
 
 on:
   schedule:
-    - cron: '0 */2 * * *' # a cada 2 horas
+    - cron: '0 */3 * * *' # a cada 3 horas
   workflow_dispatch: # permite rodar manualmente
 
 jobs:
