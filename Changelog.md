@@ -1,3 +1,12 @@
+	1.01
+	----------
+	WIDGETS:
+	- Delta: A few color changes to make it less green.
+	- Motec: RPM bar is fixed.
+	PERFORMANCE:
+	This is very important. Previously, the HUD obtained player ratings directly from the RaceRoom API. This generated very high consumption and was very bad to the game's ecosystem and servers. 
+	Now, we use a mirror database, updated every 3 hours.
+
 	1.00
 	----------
 	SealHUD is not a fork anymore.
