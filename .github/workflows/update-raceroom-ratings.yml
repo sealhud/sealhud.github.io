@@ -34,14 +34,16 @@ jobs:
           console.log('ratings.json OK, entries:', data.length);
           "
 
-      - name: Commit and push if changed
+      - name: Commit ratings.json on orphan branch
         run: |
-          git config user.name "sealhud-bot"
-          git config user.email "sealhud-bot@users.noreply.github.com"
-
+          git checkout --orphan ratings-cache
+          git rm -rf .
+      
+          mkdir -p public/raceroom
+          cp public/raceroom/ratings.json ./public/raceroom/ratings.json
+      
           git add public/raceroom/ratings.json
-
-          git diff --cached --quiet && echo "No changes" || (
-            git commit -m "Update RaceRoom ratings cache"
-            git push
-          )
+      
+          git commit -m "Update RaceRoom ratings cache"
+      
+          git push origin ratings-cache --force
