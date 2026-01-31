@@ -42,14 +42,17 @@ jobs:
       - name: Commit ratings.json on orphan branch
         run: |
           cp public/raceroom/ratings.json /tmp/ratings.json
-
+      
           git checkout --orphan ratings-cache
           git rm -rf .
-
+      
           mkdir -p public/raceroom
           cp /tmp/ratings.json public/raceroom/ratings.json
-
+      
+          git config user.name "sealhud-bot"
+          git config user.email "sealhud-bot@users.noreply.github.com"
+      
           git add public/raceroom/ratings.json
           git commit -m "Update RaceRoom ratings cache"
-
+      
           git push origin ratings-cache --force
