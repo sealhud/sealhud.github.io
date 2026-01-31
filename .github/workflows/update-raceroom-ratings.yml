@@ -2,8 +2,11 @@ name: Update RaceRoom Ratings Cache
 
 on:
   schedule:
-    - cron: '0 */3 * * *' # a cada 3 horas
-  workflow_dispatch: # permite rodar manualmente
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-ratings:
@@ -12,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Create target directory
         run: mkdir -p public/raceroom
@@ -36,14 +41,15 @@ jobs:
 
       - name: Commit ratings.json on orphan branch
         run: |
+          cp public/raceroom/ratings.json /tmp/ratings.json
+
           git checkout --orphan ratings-cache
           git rm -rf .
-      
+
           mkdir -p public/raceroom
-          cp public/raceroom/ratings.json ./public/raceroom/ratings.json
-      
+          cp /tmp/ratings.json public/raceroom/ratings.json
+
           git add public/raceroom/ratings.json
-      
           git commit -m "Update RaceRoom ratings cache"
-      
+
           git push origin ratings-cache --force
