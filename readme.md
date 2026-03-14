@@ -40,9 +40,8 @@ If you want to contribute, report issues, or follow development progress, please
 1. In your **Steam Library**, right-click on *RaceRoom Racing Experience* → **Properties** → **Launch Options**  
 2. Add the following parameter: -webHudUrl=https://sealhud.github.io/
 3. Make sure your **CrewChief** or **dash.exe** is updated to the latest version (only one of the two is required):  
-👉 [Download CrewChief](https://thecrewchief.org/forumdisplay.php?28-Download-and-Links)
-
-👉 [Download dash.exe (latest)](https://sector3studios.github.io/webhud/public/dash.zip)
+  👉 [Download CrewChief](https://thecrewchief.org/forumdisplay.php?28-Download-and-Links)
+  👉 [Download dash.exe (latest)](https://sector3studios.github.io/webhud/public/dash.zip)
 
 ---
 
