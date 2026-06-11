@@ -16,7 +16,7 @@ SealHUD is an actively maintained project that delivers a modern HUD experience 
 - Ongoing maintenance and feature improvements by the SealHUD Team  
 
 The goal is to provide a reliable, flexible, and future-proof HUD for sim racers.<br>
-We use CORS Proxy provided by 🔗[CORSFIX](https://www.corsfix.com)
+🔗 CORS Proxy provided by [CORSFIX](https://www.corsfix.com)
 
 ---
 
