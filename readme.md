@@ -43,6 +43,9 @@ If you want to contribute, report issues, or follow development progress, please
 👉 [Download CrewChief](https://thecrewchief.org/forumdisplay.php?28-Download-and-Links)<br>
 👉 [Download dash.zip (latest)](https://sealhud.github.io/dash.zip)
 
+**VERY IMPORTANT:**
+RaceRoom's shared memory requires local TCP port 8070 to share data. Certain third-party services (such as Razer Haptic) use this port, causing a conflict that prevents SealHUD from working. Check if TCP port 8070 is currently in use on your computer (using Windows Resource Monitor / resmon.exe). If it is, you can either disable the service using Windows Services (services.msc) or change the communication port used with RaceRoom, as described in this post: SealHUD Forum Thread - change WebSocket Port on CrewChief(https://forum.kw-studios.com/index.php?threads/sealhud-webhud.20675/page-21#post-261276)
+
 ---
 
 ## 🤝 Contributing
