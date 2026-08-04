@@ -37,9 +37,12 @@ If you want to contribute, report issues, or follow development progress, please
 
 ## 🚀 How to Use
 
-1. In your **Steam Library**, right-click on *RaceRoom Racing Experience* → **Properties** → **Launch Options**  
-2. Add the following parameter: -webHudUrl=https://sealhud.github.io/
-3. Make sure your **CrewChief** or **dash.exe** is updated to the latest version (only one of the two is required):  
+1. [Download SealHUD](https://sealhud.github.io/SealHUD.zip)
+2. Extract the ZIP file to any folder you like.
+3. In your **Steam Library**, right-click on *RaceRoom Racing Experience* → **Properties** → **Launch Options**  
+4. Add the following parameter: -webHudUrl=http://localhost:1180
+5. Run "Start SealHUD.bat". It will automatically check for updates and start the local SealHUD web server.
+6. Make sure your **CrewChief** or **dash.exe** is updated to the latest version (only one of the two is required):  
 👉 [Download CrewChief](https://thecrewchief.org/forumdisplay.php?28-Download-and-Links)<br>
 👉 [Download dash.zip (latest)](https://sealhud.github.io/dash.zip)
 
