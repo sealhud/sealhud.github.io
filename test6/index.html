@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+let ws = new WebSocket("ws://localhost:8070/r3e");
+
+ws.onopen = () => {
+    document.body.innerHTML = "WS OK";
+};
+
+ws.onerror = (e) => {
+    document.body.innerHTML = "WS ERRO";
+};
+
+ws.onclose = (e) => {
+    document.body.innerHTML =
+        "WS CLOSE<br>" +
+        "Code: " + e.code + "<br>" +
+        "Reason: " + e.reason;
+};
+
+</script>
+</body>
+</html>
