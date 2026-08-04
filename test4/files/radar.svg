@@ -1,0 +1,27 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="140" height="140">
+	<style>
+		.s0 { opacity: .07;fill: #000000 } 
+		.s1 { opacity: .12;fill: #000000 } 
+		.s2 { opacity: .7;fill: none;stroke: #ffffff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2 } 
+		.s3 { opacity: .7;fill: none;stroke: #ffffff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2;stroke-dasharray: 0,4.75 } 
+		.s4 { opacity: .7;fill: none;stroke: #ffffff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2;stroke-dasharray: 0,4.74 } 
+	</style>
+	<path id="Forma 1" fill-rule="evenodd" class="s0" d="m69.5 119c-27.37 0-49.5-22.13-49.5-49.5 0-27.37 22.13-49.5 49.5-49.5 27.37 0 49.5 22.13 49.5 49.5 0 27.37-22.13 49.5-49.5 49.5z"/>
+	<path id="Forma 1 copy 2" fill-rule="evenodd" class="s1" d="m69.5 93.36c-13.2 0-23.86-10.66-23.86-23.86 0-13.2 10.66-23.86 23.86-23.86 13.2 0 23.86 10.66 23.86 23.86 0 13.2-10.66 23.86-23.86 23.86z"/>
+	<path fill-rule="evenodd" class="s2" d="m36.41 103.59"/>
+	<path fill-rule="evenodd" class="s3" d="m39.77 100.23l28.52-28.55"/>
+	<path fill-rule="evenodd" class="s2" d="m69.96 70"/>
+	<path fill-rule="evenodd" class="s2" d="m70 70"/>
+	<path fill-rule="evenodd" class="s4" d="m73.35 73.36l28.49 28.55"/>
+	<path fill-rule="evenodd" class="s2" d="m103.51 103.59"/>
+	<path fill-rule="evenodd" class="s2" d="m103.51 36.41"/>
+	<path fill-rule="evenodd" class="s3" d="m100.16 39.77l-28.52 28.55"/>
+	<path fill-rule="evenodd" class="s2" d="m69.96 70"/>
+	<path fill-rule="evenodd" class="s2" d="m69.93 70"/>
+	<path fill-rule="evenodd" class="s4" d="m66.58 66.64l-28.49-28.55"/>
+	<path fill-rule="evenodd" class="s2" d="m36.41 36.41"/>
+	<path class="s2" d="m36.41 36.41c-18.55 18.55-18.55 48.63 0 67.18"/>
+	<path class="s2" d="m103.51 36.41c18.55 18.55 18.55 48.63 0 67.18"/>
+	<path class="s2" d="m53.21 86.79c-9.27-9.27-9.27-24.31 0-33.59"/>
+	<path class="s2" d="m86.79 53.21c9.27 9.27 9.27 24.31 0 33.59"/>
+</svg>
